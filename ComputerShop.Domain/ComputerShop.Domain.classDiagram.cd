@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ComputerShop.Domain.Address">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAMAAAACAAAAIIAAAACAAAAgAAQAAA=</HashCode>
+      <FileName>Address.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Bottom" Position="0.1" />
+  </Class>
+  <Class Name="ComputerShop.Domain.Computer">
+    <Position X="18.5" Y="7.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAQEAABAAQAAAAAAAQAgAIAAAACAAAA=</HashCode>
+      <FileName>Computer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Bottom" Position="0.1" />
+  </Class>
+  <Class Name="ComputerShop.Domain.CPU">
+    <Position X="6.75" Y="7.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>EAAAAhAQAAAAEAAEAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>CPU.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Bottom" Position="0.1" />
+  </Class>
+  <Class Name="ComputerShop.Domain.Customer">
+    <Position X="2.75" Y="8.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAABAAAkAQAAAAgQAAAAAAAIAAAADAAAAAQ=</HashCode>
+      <FileName>Customer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Bottom" Position="0.1" />
+  </Class>
+  <Class Name="ComputerShop.Domain.Desktop">
+    <Position X="17.25" Y="12.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IAEAACAAAEAkAEAECAAAAAAAAAAEAAAAAAQAAAAAACA=</HashCode>
+      <FileName>Desktop.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Bottom" Position="0.1" />
+  </Class>
+  <Class Name="ComputerShop.Domain.Entity">
+    <Position X="10.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Entity.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Bottom" Position="0.1" />
+  </Class>
+  <Class Name="ComputerShop.Domain.GPU">
+    <Position X="13.25" Y="7.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAgAAAAAQEgAIAAQACQAEABAAAAAICAAAAAoA=</HashCode>
+      <FileName>GPU.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Bottom" Position="0.1" />
+  </Class>
+  <Class Name="ComputerShop.Domain.GPUCollection" BaseTypeListCollapsed="true">
+    <Position X="8.5" Y="17.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAACAAABAAAAAAAAAAAAAAAAAAAACQ=</HashCode>
+      <FileName>GPUCollection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Bottom" Position="0.1" />
+  </Class>
+  <Class Name="ComputerShop.Domain.HDD">
+    <Position X="8.75" Y="7.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAEBQEiBIAAAADAAAAAQAAABAAAAAAAAA=</HashCode>
+      <FileName>HDD.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Bottom" Position="0.1" />
+  </Class>
+  <Class Name="ComputerShop.Domain.HDDCollection" BaseTypeListCollapsed="true">
+    <Position X="10.75" Y="17.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAGAoAEAAAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>HDDCollection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Bottom" Position="0.1" />
+  </Class>
+  <Class Name="ComputerShop.Domain.Laptop">
+    <Position X="20" Y="12.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAEAQAAAAEAACAAABAgAAwQAAAIBAA=</HashCode>
+      <FileName>Laptop.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Bottom" Position="0.1" />
+  </Class>
+  <Class Name="ComputerShop.Domain.Manufacturer">
+    <Position X="16.75" Y="3.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQEAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Manufacturer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Bottom" Position="0.1" />
+  </Class>
+  <Class Name="ComputerShop.Domain.Person">
+    <Position X="2.75" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAhAAIAMACAAAAAgAAAAAAAAAAAACAAAAAg=</HashCode>
+      <FileName>Person.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Bottom" Position="0.1" />
+  </Class>
+  <Class Name="ComputerShop.Domain.Product">
+    <Position X="10.5" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAgBAAAIAQAAAAAAAAAAAAAAAAAAAAAAAAgAAAAIAAA=</HashCode>
+      <FileName>Product.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Bottom" Position="0.1" />
+  </Class>
+  <Class Name="ComputerShop.Domain.RamModule">
+    <Position X="10.75" Y="7.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAQAAAAnAQEgIAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>RamModule.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Bottom" Position="0.1" />
+  </Class>
+  <Class Name="ComputerShop.Domain.RamModuleCollection" BaseTypeListCollapsed="true">
+    <Position X="6.25" Y="17.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAABAgQAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>RamModuleCollection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Bottom" Position="0.1" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

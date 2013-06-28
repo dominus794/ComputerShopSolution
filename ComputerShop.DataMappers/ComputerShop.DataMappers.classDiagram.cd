@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ComputerShop.DataMappers.DataMapper&lt;TEntity&gt;">
+    <Position X="6.75" Y="11.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAgAAQAAgAAA=</HashCode>
+      <FileName>DataMapper.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ComputerShop.DataMappers.DataMapperFactory&lt;TEntity&gt;">
+    <Position X="7.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataMapperFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ComputerShop.DataMappers.ManufacturerDataMapperFactory">
+    <Position X="0.5" Y="2.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataMapperFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.DataMappers.CPUDataMapperFactory">
+    <Position X="3.25" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataMapperFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.DataMappers.RamModuleDataMapperFactory">
+    <Position X="5.5" Y="2.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataMapperFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.DataMappers.HDDDataMapperFactory">
+    <Position X="8.25" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataMapperFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.DataMappers.GPUDataMapperFactory">
+    <Position X="10.5" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataMapperFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.DataMappers.DesktopDataMapperFactory">
+    <Position X="12.75" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataMapperFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.DataMappers.LaptopDataMapperFactory">
+    <Position X="15" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataMapperFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.DataMappers.Linq2Sql.Linq2SqlCPUDataMapper">
+    <Position X="0.5" Y="21.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAgAAQAAAAAA=</HashCode>
+      <FileName>Linq2Sql\Linq2SqlCPUDataMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.DataMappers.Linq2Sql.Linq2SqlDataMapperBase&lt;TEntity&gt;">
+    <Position X="3" Y="15.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAEAAAAAAAAAAAAAAAAAAAAEAAAAAAgAAQAAAAAA=</HashCode>
+      <FileName>Linq2Sql\Linq2SqlDataMapperBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.DataMappers.Linq2Sql.Linq2SqlDesktopDataMapper">
+    <Position X="0.5" Y="30.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAgAAQAAAAAA=</HashCode>
+      <FileName>Linq2Sql\Linq2SqlDesktopDataMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.DataMappers.Linq2Sql.Linq2SqlGPUDataMapper">
+    <Position X="0.5" Y="28" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAgAAQAAAAAA=</HashCode>
+      <FileName>Linq2Sql\Linq2SqlGPUDataMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.DataMappers.Linq2Sql.Linq2SqlHDDDataMapper">
+    <Position X="0.5" Y="25.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAgAAQAAAAAA=</HashCode>
+      <FileName>Linq2Sql\Linq2SqlHDDDataMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.DataMappers.Linq2Sql.Linq2SqlLaptopDataMapper">
+    <Position X="0.5" Y="32.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAgAAQAAAAAA=</HashCode>
+      <FileName>Linq2Sql\Linq2SqlLaptopDataMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.DataMappers.Linq2Sql.Linq2SqlManufacturerDataMapper">
+    <Position X="0.5" Y="19" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAgAAQAAAAAA=</HashCode>
+      <FileName>Linq2Sql\Linq2SqlManufacturerDataMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.DataMappers.Linq2Sql.Linq2SqlRamModuleDataMapper">
+    <Position X="0.5" Y="23.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAgAAQAAAAAA=</HashCode>
+      <FileName>Linq2Sql\Linq2SqlRamModuleDataMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.DataMappers.SQL.SQLCPUDataMapper">
+    <Position X="3.5" Y="7.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ABQAAEAAACAAAAAAAAAAAAAAAAEAAAAQAgAAQAAAAAA=</HashCode>
+      <FileName>SQL\SQLCPUDataMapper.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ComputerShop.DataMappers.SQL.SQLGPUDataMapper">
+    <Position X="8.75" Y="7.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ABQAAEAAACAAAAAAAAAAAAAAAAEAAAAAAwAAQAAAAAA=</HashCode>
+      <FileName>SQL\SQLGPUDataMapper.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ComputerShop.DataMappers.SQL.SQLHDDDataMapper">
+    <Position X="11.25" Y="7.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ABQAAEAAACAAAAAAAAAAAAAgAAEAAAAAAgAAQAAAAAA=</HashCode>
+      <FileName>SQL\SQLHDDDataMapper.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ComputerShop.DataMappers.SQL.SQLLaptopDataMapper">
+    <Position X="16.5" Y="6" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAEAAACAAIAAAAEAAAAEAAAEAAAAAAkQgQAAAAAA=</HashCode>
+      <FileName>SQL\SQLLaptopDataMapper.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ComputerShop.DataMappers.SQL.SQLManufacturerDataMapper">
+    <Position X="1" Y="7.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ABQAAEAAACAAAAAAAAAAAAAAAAEAAAAAAgAAQAAAAAA=</HashCode>
+      <FileName>SQL\SQLManufacturerDataMapper.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ComputerShop.DataMappers.SQL.SQLRamModuleDataMapper">
+    <Position X="6" Y="7.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ABQCAEAAACAAAAAAAAAAAAAAAAEAAAAAAgAAQAAAAAA=</HashCode>
+      <FileName>SQL\SQLRamModuleDataMapper.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ComputerShop.DataMappers.SQLDataSet.SQLDataSetCPUDataMapper">
+    <Position X="11.5" Y="21.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAgAAQAAAAAA=</HashCode>
+      <FileName>SQLDataSet\SQLDataSetCPUDataMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.DataMappers.SQLDataSet.SQLDataSetDatabase">
+    <Position X="19.75" Y="15.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAEAACARAAAAAAAAABAAAAAAABBCAEAAQAAAAAQgBAg=</HashCode>
+      <FileName>SQLDataSet\SQLDataSetDatabase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.DataMappers.SQLDataSet.SQLDataSetDataMapperBase&lt;TEntity&gt;">
+    <Position X="9.75" Y="15.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAQAAAAAAAAAAAAAAEAAAAAAgAAQAAAAAA=</HashCode>
+      <FileName>SQLDataSet\SQLDataSetDataMapperBase.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="db" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ComputerShop.DataMappers.SQLDataSet.SQLDataSetDesktopDataMapper">
+    <Position X="11.5" Y="31.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAgAAQAAAAAA=</HashCode>
+      <FileName>SQLDataSet\SQLDataSetDesktopDataMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.DataMappers.SQLDataSet.SQLDataSetGPUDataMapper">
+    <Position X="11.5" Y="28.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAgAAQAAAAAA=</HashCode>
+      <FileName>SQLDataSet\SQLDataSetGPUDataMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.DataMappers.SQLDataSet.SQLDataSetHDDDataMapper">
+    <Position X="11.5" Y="26.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAgAAQAAAAAA=</HashCode>
+      <FileName>SQLDataSet\SQLDataSetHDDDataMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.DataMappers.SQLDataSet.SQLDataSetLaptopDataMapper">
+    <Position X="11.5" Y="33.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAgAAQAAAAAA=</HashCode>
+      <FileName>SQLDataSet\SQLDataSetLaptopDataMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.DataMappers.SQLDataSet.SQLDataSetManufacturerDataMapper">
+    <Position X="11.5" Y="18.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAgAAQAAAAAA=</HashCode>
+      <FileName>SQLDataSet\SQLDataSetManufacturerDataMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.DataMappers.SQLDataSet.SQLDataSetRamModuleDataMapper">
+    <Position X="11.5" Y="23.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAgAAQAAAAAA=</HashCode>
+      <FileName>SQLDataSet\SQLDataSetRamModuleDataMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.DataMappers.XML.XMLDataMapperBase&lt;TEntity&gt;" Collapsed="true">
+    <Position X="14.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAgAAQAAAAAA=</HashCode>
+      <FileName>XML\XMLDataMapperBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.DataMappers.XML.XMLManufacturerDataMapper" Collapsed="true">
+    <Position X="14.25" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAIAAAAAAAAAAAEAAABAAgAAQAAAAAA=</HashCode>
+      <FileName>XML\XMLManufacturerDataMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.DataMappers.SQL.SQLDesktopDataMapper">
+    <Position X="13.75" Y="6" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAAEAAACAAIAAAIEAAAAAIAAEAAAAAAkQgQAAAAAg=</HashCode>
+      <FileName>SQL\SQLDesktopDataMapper.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="ComputerShop.DataMappers.IDataMapper&lt;TEntity&gt;">
+    <Position X="4.25" Y="11.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAgAAQAAgAAA=</HashCode>
+      <FileName>IDataMapper.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ComputerShop.DataMappers.IDataMapperFactory&lt;TEntity&gt;">
+    <Position X="4.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IDataMapperFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="ComputerShop.DataMappers.DataMapperType">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAACAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>DataMapperFactory.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

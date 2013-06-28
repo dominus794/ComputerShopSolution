@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{43A6E0A9-EE10-4820-A23E-28E0652A9920}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ComputerShop.DataMappers</RootNamespace>
+    <AssemblyName>ComputerShop.DataMappers</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataMapper.cs" />
+    <Compile Include="DataMapperFactory.cs" />
+    <Compile Include="IDataMapper.cs" />
+    <Compile Include="IDataMapperFactory.cs" />
+    <Compile Include="Linq2Sql\Linq2SqlCPUDataMapper.cs" />
+    <Compile Include="Linq2Sql\Linq2SqlDataMapperBase.cs" />
+    <Compile Include="Linq2Sql\Linq2SqlDesktopDataMapper.cs" />
+    <Compile Include="Linq2Sql\Linq2SqlGPUDataMapper.cs" />
+    <Compile Include="Linq2Sql\Linq2SqlHDDDataMapper.cs" />
+    <Compile Include="Linq2Sql\Linq2SqlLaptopDataMapper.cs" />
+    <Compile Include="Linq2Sql\Linq2SqlManufacturerDataMapper.cs" />
+    <Compile Include="Linq2Sql\Linq2SqlRamModuleDataMapper.cs" />
+    <Compile Include="SQLDataSet\SQLDataSetDatabase.cs" />
+    <Compile Include="SQL\SQLDesktopDataMapper.cs" />
+    <Compile Include="SQL\SQLGPUDataMapper.cs" />
+    <Compile Include="SQL\SQLHDDDataMapper.cs" />
+    <Compile Include="SQL\SQLLaptopDataMapper.cs" />
+    <Compile Include="SQL\SQLManufacturerDataMapper.cs" />
+    <Compile Include="SQL\SQLCPUDataMapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQLDataSet\SQLDataSetCPUDataMapper.cs" />
+    <Compile Include="SQLDataSet\SQLDataSetDataMapperBase.cs" />
+    <Compile Include="SQLDataSet\SQLDataSetDesktopDataMapper.cs" />
+    <Compile Include="SQLDataSet\SQLDataSetGPUDataMapper.cs" />
+    <Compile Include="SQLDataSet\SQLDataSetHDDDataMapper.cs" />
+    <Compile Include="SQLDataSet\SQLDataSetLaptopDataMapper.cs" />
+    <Compile Include="SQLDataSet\SQLDataSetManufacturerDataMapper.cs" />
+    <Compile Include="SQLDataSet\SQLDataSetRamModuleDataMapper.cs" />
+    <Compile Include="SQL\SQLRamModuleDataMapper.cs" />
+    <Compile Include="XML\XMLDataMapperBase.cs" />
+    <Compile Include="XML\XMLManufacturerDataMapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ComputerShop.DAL\ComputerShop.DAL.csproj">
+      <Project>{A04EF72A-73AA-4CF2-8E8B-5F95155F857F}</Project>
+      <Name>ComputerShop.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ComputerShop.Domain\ComputerShop.Domain.csproj">
+      <Project>{80A1E504-0F6F-4460-8AA7-1C8D8DB2EED2}</Project>
+      <Name>ComputerShop.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ComputerShop.Interfaces\ComputerShop.Interfaces.csproj">
+      <Project>{6A020E94-9CFA-4017-9DFF-8EA4B39EE171}</Project>
+      <Name>ComputerShop.Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="XML\Manufacturers.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="ComputerShop.DataMappers.classDiagram.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

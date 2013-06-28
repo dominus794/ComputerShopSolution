@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ComputerShop.MVC.ComputerShopManager">
+    <Position X="0.5" Y="1" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>oAAgAgkAAAIEAAwQAEAhAEFEJAACAAAEIwAWBMkACgA=</HashCode>
+      <FileName>ComputerShopManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.MVC.Controllers.CPUFactoryController">
+    <Position X="8" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAoAAAAAEAAAAAABAAAAAAAAQAAACAAAAA=</HashCode>
+      <FileName>Controllers\CPUFactoryController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="factory" />
+      <Field Name="view" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ComputerShop.MVC.Controllers.DesktopFactoryController">
+    <Position X="20" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAgABQAAEAAAARAJAAAAAAAIQAAAAAAAAA=</HashCode>
+      <FileName>Controllers\DesktopFactoryController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="factory" />
+      <Field Name="view" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ComputerShop.MVC.Controllers.EntitySelectorController&lt;TEntity&gt;">
+    <Position X="8.5" Y="14.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAQAAQAAAAAA=</HashCode>
+      <FileName>Controllers\EntitySelectorController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="view" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ComputerShop.MVC.Controllers.GPUFactoryController">
+    <Position X="16.75" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAiAAAAAEAAAABAAAAAAAAAAQAAAAACAAA=</HashCode>
+      <FileName>Controllers\GPUFactoryController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="factory" />
+      <Field Name="view" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ComputerShop.MVC.Controllers.HDDFactoryController">
+    <Position X="13.75" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>CAAgAAAAAAAgAAAAAEAAAAAAAAAAAAAAAQAAEAAAAAA=</HashCode>
+      <FileName>Controllers\HDDFactoryController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="view" />
+      <Field Name="factory" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ComputerShop.MVC.Controllers.LaptopFactoryController">
+    <Position X="23" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAiAAAAAAIgAAAAAEAAAABAJEAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Controllers\LaptopFactoryController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="factory" />
+      <Field Name="view" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ComputerShop.MVC.Controllers.ManufacturerFactoryController">
+    <Position X="5" Y="7" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAwAAAAAEAAAAAAAAAAAAAAAQCAAAAAAAA=</HashCode>
+      <FileName>Controllers\ManufacturerFactoryController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="factory" />
+      <Field Name="view" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ComputerShop.MVC.Controllers.RamModuleFactoryController">
+    <Position X="10.75" Y="7" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAgAAAAAEAEAAAAIAAAAAAQAQAAAAAAAAA=</HashCode>
+      <FileName>Controllers\RamModuleFactoryController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="factory" />
+      <Field Name="view" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ComputerShop.MVC.Models.CPUFactory">
+    <Position X="8" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAIAAAAAAAAAAAABAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Models\CPUFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.MVC.Models.DesktopFactory">
+    <Position X="20" Y="11.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABQAAAAAAAQAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Models\DesktopFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.MVC.Models.GPUFactory">
+    <Position X="16.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIACAAAAAAAAAABAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Models\GPUFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.MVC.Models.HDDFactory">
+    <Position X="13.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAgAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Models\HDDFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.MVC.Models.LaptopFactory">
+    <Position X="23" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAIAAAAAAAAAAAAAAEAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Models\LaptopFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.MVC.Models.ManufacturerFactory">
+    <Position X="5" Y="11.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAQAAAAAEAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Models\ManufacturerFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.MVC.Models.RamModuleFactory">
+    <Position X="10.75" Y="11.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAEAAAAIAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Models\RamModuleFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.MVC.Utilities.UserInputValidator">
+    <Position X="5" Y="14.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utilities\UserInputValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.MVC.Views.CPUFactoryView">
+    <Position X="8" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAIAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\CPUFactoryView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.MVC.Views.DesktopFactoryView">
+    <Position X="20" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Views\DesktopFactoryView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.MVC.Views.EntitySelectorView&lt;TEntity&gt;">
+    <Position X="8.5" Y="17.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAEAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\EntitySelectorView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.MVC.Views.FactoryViewBase">
+    <Position X="15.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAEAAAAAAIAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\FactoryViewBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.MVC.Views.GPUFactoryView">
+    <Position X="16.75" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAIAACAAAAAEAAAAAQCAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\GPUFactoryView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.MVC.Views.HDDFactoryView">
+    <Position X="13.75" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAACAAQAAAAAAAAAAAABAAAAAEAAAA=</HashCode>
+      <FileName>Views\HDDFactoryView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.MVC.Views.LaptopFactoryView">
+    <Position X="23" Y="4" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAEAAAAAAAAAABAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\LaptopFactoryView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.MVC.Views.ManufacturerFactoryView">
+    <Position X="5" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Views\ManufacturerFactoryView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerShop.MVC.Views.RamModuleFactoryView">
+    <Position X="10.75" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAQACAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\RamModuleFactoryView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

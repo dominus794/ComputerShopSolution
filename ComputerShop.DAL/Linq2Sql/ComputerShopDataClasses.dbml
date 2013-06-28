@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="JustITComputerShop" Class="ComputerShopDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DOMINUS-PC\SQLEXPRESS;Initial Catalog=JustITComputerShop;Integrated Security=True" SettingsObjectName="ComputerShop.DAL.Properties.Settings" SettingsPropertyName="JustITComputerShopConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CPUs" Member="CPUs">
+    <Type Name="CPU">
+      <Column Name="cpu_id" Member="CpuID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="manufacturer_id" Member="ManufacturerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="model" Member="Model" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="price" Member="Price" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="clock_speed" Member="ClockSpeed" Type="System.Single" DbType="Decimal(3,2) NOT NULL" CanBeNull="false" />
+      <Column Name="no_of_cores" Member="NoOfCores" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="cpu_form_factor" Member="CpuFormFactor" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="CPU_Desktop" Member="Desktops" ThisKey="CpuID" OtherKey="CpuID" Type="Desktop" />
+      <Association Name="CPU_Laptop" Member="Laptops" ThisKey="CpuID" OtherKey="CpuID" Type="Laptop" />
+      <Association Name="Manufacturer_CPU" Member="Manufacturer" ThisKey="ManufacturerID" OtherKey="ManufacturerID" Type="Manufacturer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RamModules" Member="RamModules">
+    <Type Name="RamModule">
+      <Column Name="ram_id" Member="RamID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="manufacturer_id" Member="ManufacturerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="model" Member="Model" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="price" Member="Price" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="bus_speed" Member="ClockSpeed" Type="System.UInt16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="size" Member="Size" Type="System.UInt16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="ddr_version" Member="DDRVersion" Type="System.String" DbType="NChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="ram_form_factor" Member="RamFormFactor" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="RamModule_DesktopRamModule" Member="DesktopRamModules" ThisKey="RamID" OtherKey="RamID" Type="DesktopRamModule" />
+      <Association Name="RamModule_LaptopRamModule" Member="LaptopRamModules" ThisKey="RamID" OtherKey="RamID" Type="LaptopRamModule" />
+      <Association Name="Manufacturer_RamModule" Member="Manufacturer" ThisKey="ManufacturerID" OtherKey="ManufacturerID" Type="Manufacturer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DesktopGPUs" Member="DesktopGPUs">
+    <Type Name="DesktopGPU">
+      <Column Name="desktop_id" Member="DesktopID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="gpu_id" Member="GpuID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="quantity" Member="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Desktop_DesktopGPU" Member="Desktop" ThisKey="DesktopID" OtherKey="DesktopID" Type="Desktop" IsForeignKey="true" />
+      <Association Name="GPU_DesktopGPU" Member="GPU" Storage="_GPUs" ThisKey="GpuID" OtherKey="GpuID" Type="GPU" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DesktopHDDs" Member="DesktopHDDs">
+    <Type Name="DesktopHDD">
+      <Column Name="desktop_id" Member="DesktopID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="hdd_id" Member="HddID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="quantity" Member="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Desktop_DesktopHDD" Member="Desktop" ThisKey="DesktopID" OtherKey="DesktopID" Type="Desktop" IsForeignKey="true" />
+      <Association Name="HDD_DesktopHDD" Member="HDD" ThisKey="HddID" OtherKey="HddID" Type="HDD" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DesktopRamModules" Member="DesktopRamModules">
+    <Type Name="DesktopRamModule">
+      <Column Name="desktop_id" Member="DesktopID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ram_id" Member="RamID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="quantity" Member="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="RamModule_DesktopRamModule" Member="RamModule" ThisKey="RamID" OtherKey="RamID" Type="RamModule" IsForeignKey="true" />
+      <Association Name="Desktop_DesktopRamModule" Member="Desktop" ThisKey="DesktopID" OtherKey="DesktopID" Type="Desktop" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Desktops" Member="Desktops">
+    <Type Name="Desktop">
+      <Column Name="desktop_id" Member="DesktopID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="manufacturer_id" Member="ManufacturerID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="model" Member="Model" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="price" Member="Price" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="cpu_id" Member="CpuID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="monitor_id" Member="MonitorID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Desktop_DesktopGPU" Member="DesktopGPUs" ThisKey="DesktopID" OtherKey="DesktopID" Type="DesktopGPU" />
+      <Association Name="Desktop_DesktopHDD" Member="DesktopHDDs" ThisKey="DesktopID" OtherKey="DesktopID" Type="DesktopHDD" />
+      <Association Name="Desktop_DesktopRamModule" Member="DesktopRamModules" ThisKey="DesktopID" OtherKey="DesktopID" Type="DesktopRamModule" />
+      <Association Name="CPU_Desktop" Member="CPU" Storage="_CPUs" ThisKey="CpuID" OtherKey="CpuID" Type="CPU" IsForeignKey="true" />
+      <Association Name="Manufacturer_Desktop" Member="Manufacturer" ThisKey="ManufacturerID" OtherKey="ManufacturerID" Type="Manufacturer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GPUs" Member="GPUs">
+    <Type Name="GPU">
+      <Column Name="gpu_id" Member="GpuID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="manufacturer_id" Member="ManufacturerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="model" Member="Model" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="price" Member="Price" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="gpu_model" Member="GpuModel" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="gpu_clock_speed" Member="GpuClockSpeed" Type="System.UInt16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="vram_size" Member="VRamSize" Type="System.UInt16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="vram_clock_speed" Member="VRamClockSpeed" Type="System.UInt16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="vram_type" Member="GDDRVersion" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="gpu_type" Member="GpuType" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="GPU_DesktopGPU" Member="DesktopGPUs" ThisKey="GpuID" OtherKey="GpuID" Type="DesktopGPU" />
+      <Association Name="GPU_Laptop" Member="Laptops" ThisKey="GpuID" OtherKey="GpuID" Type="Laptop" />
+      <Association Name="Manufacturer_GPU" Member="Manufacturer" ThisKey="ManufacturerID" OtherKey="ManufacturerID" Type="Manufacturer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HDDs" Member="HDDs">
+    <Type Name="HDD">
+      <Column Name="hdd_id" Member="HddID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="manufacturer_id" Member="ManufacturerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="model" Member="Model" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="price" Member="Price" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="capacity" Member="Capacity" Type="System.UInt16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="speed" Member="Speed" Type="System.UInt16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="hdd_type" Member="HddType" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="hdd_form_factor" Member="HddFormFactor" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="hdd_interface" Member="HddInterface" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="HDD_DesktopHDD" Member="DesktopHDDs" ThisKey="HddID" OtherKey="HddID" Type="DesktopHDD" />
+      <Association Name="HDD_Laptop" Member="Laptops" ThisKey="HddID" OtherKey="HddID" Type="Laptop" />
+      <Association Name="Manufacturer_HDD" Member="Manufacturer" ThisKey="ManufacturerID" OtherKey="ManufacturerID" Type="Manufacturer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LaptopRamModules" Member="LaptopRamModules">
+    <Type Name="LaptopRamModule">
+      <Column Name="laptop_id" Member="LaptopID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ram_id" Member="RamID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="quantity" Member="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="RamModule_LaptopRamModule" Member="RamModule" ThisKey="RamID" OtherKey="RamID" Type="RamModule" IsForeignKey="true" />
+      <Association Name="Laptop_LaptopRamModule" Member="Laptop" ThisKey="LaptopID" OtherKey="LaptopID" Type="Laptop" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Laptops" Member="Laptops">
+    <Type Name="Laptop">
+      <Column Name="laptop_id" Member="LaptopID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="manufacturer_id" Member="ManufacturerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="model" Member="Model" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="price" Member="Price" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="weight" Member="Weight" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="battery_life" Member="BatteryLife" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="display_size" Member="DisplaySize" Type="System.Single" DbType="Decimal(3,1) NOT NULL" CanBeNull="false" />
+      <Column Name="cpu_id" Member="CpuID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="hdd_id" Member="HddID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gpu_id" Member="GpuID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Laptop_LaptopRamModule" Member="LaptopRamModules" ThisKey="LaptopID" OtherKey="LaptopID" Type="LaptopRamModule" />
+      <Association Name="CPU_Laptop" Member="CPU" Storage="_CPUs" ThisKey="CpuID" OtherKey="CpuID" Type="CPU" IsForeignKey="true" />
+      <Association Name="GPU_Laptop" Member="GPU" Storage="_GPUs" ThisKey="GpuID" OtherKey="GpuID" Type="GPU" IsForeignKey="true" />
+      <Association Name="HDD_Laptop" Member="HDD" ThisKey="HddID" OtherKey="HddID" Type="HDD" IsForeignKey="true" />
+      <Association Name="Manufacturer_Laptop" Member="Manufacturer" ThisKey="ManufacturerID" OtherKey="ManufacturerID" Type="Manufacturer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Manufacturers" Member="Manufacturers">
+    <Type Name="Manufacturer">
+      <Column Name="manufacturer_id" Member="ManufacturerID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Member="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Manufacturer_CPU" Member="CPUs" ThisKey="ManufacturerID" OtherKey="ManufacturerID" Type="CPU" />
+      <Association Name="Manufacturer_RamModule" Member="RamModules" ThisKey="ManufacturerID" OtherKey="ManufacturerID" Type="RamModule" />
+      <Association Name="Manufacturer_Desktop" Member="Desktops" ThisKey="ManufacturerID" OtherKey="ManufacturerID" Type="Desktop" />
+      <Association Name="Manufacturer_GPU" Member="GPUs" ThisKey="ManufacturerID" OtherKey="ManufacturerID" Type="GPU" />
+      <Association Name="Manufacturer_HDD" Member="HDDs" ThisKey="ManufacturerID" OtherKey="ManufacturerID" Type="HDD" />
+      <Association Name="Manufacturer_Laptop" Member="Laptops" ThisKey="ManufacturerID" OtherKey="ManufacturerID" Type="Laptop" />
+    </Type>
+  </Table>
+</Database>

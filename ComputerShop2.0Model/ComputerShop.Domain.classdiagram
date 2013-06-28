@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="9185e60a-df24-4dcb-a74d-046321217c06" name="ComputerShop.Domain" linkedPackageId="84b732ca-26c9-4d60-b6a2-25512bb5f5d3" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <packageHasNamedElement>
+      <referencedType Id="5506e861-ba87-453b-a7bb-b4dd77ab8ecb" name="ICPU" isAbstract="false" isLeaf="false" cachedFullName="ICPU">
+        <elementDefinition Id="c53af6f1-9e41-4328-a811-6397dc2361d4" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="cd79b2c6-aad8-4d05-90f7-6c8a06e6e2a7" name="IRamModule" isAbstract="false" isLeaf="false" cachedFullName="IRamModule">
+        <elementDefinition Id="f07be38d-2912-4a04-ad56-9430f0bcec18" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="7ecedad7-f95d-4fa8-9314-e65598ff5278" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="d918d120-2a35-47f7-b8b0-522edae89bcb" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="215ae019-1668-49ba-8626-307c0396f6ba" name="float" isAbstract="false" isLeaf="false" cachedFullName="float">
+        <elementDefinition Id="b26db75a-aec9-464c-a021-bf0dac759030" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="e0e3bfce-e1f0-470c-94e3-33fdde029280" name="ushort" isAbstract="false" isLeaf="false" cachedFullName="ushort">
+        <elementDefinition Id="cfda760a-a77e-4959-9ac6-b137bb555af7" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="21bfe2e4-4d49-4ac7-ab50-312d4eda5d89" name="Computer" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a073ab1b-3365-45d3-9f75-ed502cf92bcf" />
+        <generalsInternal>
+          <generalization Id="a3dd226a-062a-4e6b-a2c7-f23830116420" isSubstitutable="false">
+            <classMoniker Id="235c2138-7d3c-4de7-8323-a27886b8b081" LastKnownName="Product" />
+            <elementDefinition Id="c37ae656-07f0-4374-bcbb-51482decec94" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="e63c5230-8292-4b24-905f-6a328bf6fa1b" name="cpu" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7dd4c62f-4ec4-41c2-8890-f158cfdd13b6" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="5506e861-ba87-453b-a7bb-b4dd77ab8ecb" LastKnownName="ICPU" />
+            </type_NamedElement>
+          </property>
+          <property Id="c7856ece-c282-46af-92a9-6b0716f66ff4" name="ramModules" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <lowerValueInternal>
+              <literalString Id="628b39ef-dd61-4243-9192-49dc218df44e" name="Lower" value="1">
+                <elementDefinition Id="69ffc028-cfc2-4cff-b89a-27ddb65c83e1" />
+              </literalString>
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString Id="123ec5af-3e0a-4bfa-9cca-4ae70eb178c0" name="Upper" value="*">
+                <elementDefinition Id="86d8b741-e103-4740-8d63-472d84e6ca91" />
+              </literalString>
+            </upperValueInternal>
+            <elementDefinition Id="72ae1040-67e2-4aba-8b6b-7ecc7f3a025e" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="cd79b2c6-aad8-4d05-90f7-6c8a06e6e2a7" LastKnownName="IRamModule" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="112136b5-c163-490a-98b6-97c188202123" name="Desktop" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c38c69ce-cd0b-4cb5-a69d-8d5a4c628c42" />
+        <generalsInternal>
+          <generalization Id="399c472e-49fc-4cf7-b559-e6a2290609cc" isSubstitutable="false">
+            <classMoniker Id="21bfe2e4-4d49-4ac7-ab50-312d4eda5d89" LastKnownName="Computer" />
+            <elementDefinition Id="5551173c-4776-493b-a9f0-f5cf6068ea62" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="545b3e7f-9b16-4c18-a86f-09fd3681cd6e" name="gpus" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <lowerValueInternal>
+              <literalString Id="fac580f5-d5a0-44a5-8a5f-9eb3866b505d" name="Lower" value="1">
+                <elementDefinition Id="f873c42b-5361-44cb-af2c-2c5708698bf7" />
+              </literalString>
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString Id="6cc4e8f8-80c0-4df8-84f6-7a36e47e3d96" name="Upper" value="*">
+                <elementDefinition Id="1b62d0a0-0f59-4f77-b5c6-9edfaa4e97bd" />
+              </literalString>
+            </upperValueInternal>
+            <elementDefinition Id="0ab6daa0-9dc7-4bbd-bc95-ee1fdf940bdc" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="d0cb74b2-28fe-40ca-8d3c-059673cb7b0f" LastKnownName="IGPU" />
+            </type_NamedElement>
+          </property>
+          <property Id="78389bc5-cf2d-4292-9ae5-46ef22cee5ce" name="hdds" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <lowerValueInternal>
+              <literalString Id="35f6c00c-ee16-4f6d-a8d0-14b938728ec5" name="Lower" value="1">
+                <elementDefinition Id="084d4ce0-c8e7-41db-b562-d30849be5c4c" />
+              </literalString>
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString Id="42821b62-8939-48f7-9fac-eb80412993ef" name="Upper" value="*">
+                <elementDefinition Id="27e99a38-c84b-44f3-959a-7a22b1b81b4e" />
+              </literalString>
+            </upperValueInternal>
+            <elementDefinition Id="460620d0-90b1-494b-bdcf-53f8246985ab" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="9f9442dd-5f06-4bd4-8e83-1d095f9da4ff" LastKnownName="IHDD" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="46cca183-e6ca-4b64-9059-a7c5946f2f0f" name="Laptop" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="48d6abe0-dc86-4298-9c6e-a49bb7465f53" />
+        <generalsInternal>
+          <generalization Id="31e568c7-9a64-4574-817a-281e48ea787f" isSubstitutable="false">
+            <classMoniker Id="21bfe2e4-4d49-4ac7-ab50-312d4eda5d89" LastKnownName="Computer" />
+            <elementDefinition Id="021aae79-46cb-447b-93ba-8f670a717e5a" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="6709c0bb-e8df-4c85-a175-221fcd7e4049" name="weight" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2ac231b6-c579-4e22-94b9-8578993e6aec" />
+          </property>
+          <property Id="c07ea6d2-69e0-4ff7-a422-7eed38ce8aa1" name="batteryLife" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a82f47a1-eddc-4118-845f-1aa4c0d71e55" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="235c2138-7d3c-4de7-8323-a27886b8b081" name="Product" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="233ef45c-d5f4-46c5-8a7c-a76eca859993" />
+        <generalsInternal>
+          <generalization Id="02ca7907-cda1-4385-a975-94724c7b2312" isSubstitutable="false">
+            <classMoniker Id="60943b34-83b6-478d-9662-723c3ac9e1fa" LastKnownName="Entity" />
+            <elementDefinition Id="73755500-6055-4013-a470-a14e06a22515" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="d815f01f-eb93-448a-a25e-2a63af116fda" name="manufacturer" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="021d55b9-7bf5-4967-81fe-1ed356c9ac64" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="edaaa739-c105-49df-b702-58b5e8735982" LastKnownName="IManufacturer" />
+            </type_NamedElement>
+          </property>
+          <property Id="71977dde-f877-45ab-9ac9-1150e47cfa94" name="model" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8f2143e0-fa46-400c-9f79-34af55017eec" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="7ecedad7-f95d-4fa8-9314-e65598ff5278" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+          <property Id="3e534b9d-0a1e-4ebd-bb6d-d65135d68570" name="price" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ae9ff5dd-5f37-4e7b-9a28-5657374a01d0" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c0f38f6f-f932-46eb-bda4-f048baab923c" name="CPU" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f601c940-20b0-4b17-9d79-b8b5c7550573" />
+        <generalsInternal>
+          <generalization Id="c42263bd-287a-4f7d-89c4-4929f2a3588d" isSubstitutable="false">
+            <classMoniker Id="235c2138-7d3c-4de7-8323-a27886b8b081" LastKnownName="Product" />
+            <elementDefinition Id="10017079-589a-4eeb-881d-7e9e216e6810" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="8afe7a04-7317-48e9-b658-cde3cf79143a" name="clockSpeed" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="bcf84a27-0cb6-4254-a27b-3f7fd0dbb170" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="215ae019-1668-49ba-8626-307c0396f6ba" LastKnownName="float" />
+            </type_NamedElement>
+          </property>
+          <property Id="bb64c507-f46e-4eab-b9cc-fd26b72f718a" name="cpuType" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1224c07b-1668-4e8c-a849-413185f64ef5" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="7e9ec8f4-33db-4add-b641-6cfb5dba45c7" LastKnownName="CPUType" />
+            </type_NamedElement>
+          </property>
+          <property Id="42888f2b-3ee0-4e09-91fb-d3d777c01efa" name="formFactor" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9dbdb2e9-8444-4d8c-bd8c-3085b0210879" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="ddd6e603-dd8f-4254-93f9-7dfd1f2f1dd3" LastKnownName="CPUFormFactor" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="cd168ce2-a671-425a-bfc5-3690da1621eb" name="RamModule" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2a0e6810-9f9d-4d73-bc50-9371ed782ffd" />
+        <generalsInternal>
+          <generalization Id="63d12c29-e854-4fe2-aa66-ad9f90d9dd55" isSubstitutable="false">
+            <classMoniker Id="235c2138-7d3c-4de7-8323-a27886b8b081" LastKnownName="Product" />
+            <elementDefinition Id="e340c320-014c-4481-b926-173c72122164" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="65f75e8b-ffc2-46f5-b1f9-8a2ba0490369" name="size" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a0ca6aa0-f444-48a3-9be7-bd455d6159eb" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e0e3bfce-e1f0-470c-94e3-33fdde029280" LastKnownName="ushort" />
+            </type_NamedElement>
+          </property>
+          <property Id="7bc4dfd6-c22b-4a20-8780-3428637a01cb" name="speed" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="cf561bd2-1fb6-4e80-b632-26dadef0d765" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e0e3bfce-e1f0-470c-94e3-33fdde029280" LastKnownName="ushort" />
+            </type_NamedElement>
+          </property>
+          <property Id="19bdfd5c-6800-4375-86a0-4b407becd8a3" name="formFactor" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="20b2bcf3-df44-48c9-8052-bf3a2410f745" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="204ae69b-7099-471d-894f-3ac052faf928" LastKnownName="RAMFormFactor" />
+            </type_NamedElement>
+          </property>
+          <property Id="b2435f3c-75c8-4c42-8c3b-09eac342fa44" name="ddrVersion" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f1306dfa-e96f-4037-9932-7baf8dea0c8c" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="3bd73f8c-d0c7-4da9-ac6e-01eab7843ce5" LastKnownName="DDRVersion" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="8112275a-57f3-4fcf-bdd7-b1d03c6da57d" name="Harddrive" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="12e30f22-ca7c-49be-8f3c-b20a348723c5" />
+        <generalsInternal>
+          <generalization Id="2c069d77-a8dd-4481-aa16-9f74527832cd" isSubstitutable="false">
+            <classMoniker Id="235c2138-7d3c-4de7-8323-a27886b8b081" LastKnownName="Product" />
+            <elementDefinition Id="81742db2-f362-4294-bc3a-a7ba6a069f7f" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="09dd6b4a-3cb7-4768-8398-a4ce21439160" name="capacity" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="555d924f-e2ef-417d-ad68-a5559eeff8d4" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e0e3bfce-e1f0-470c-94e3-33fdde029280" LastKnownName="ushort" />
+            </type_NamedElement>
+          </property>
+          <property Id="df73894d-e725-4a57-9b10-613759a35600" name="formFactor" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="bb9e26ec-415a-4a99-800c-f23349533a3c" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b7cfdfb9-0dfe-4a6a-84fe-4b2f0e7994f1" LastKnownName="HDDFormFactor" />
+            </type_NamedElement>
+          </property>
+          <property Id="7ed754e6-fe8e-428c-a660-0b6ce727822b" name="hddInterfaceType" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0d322495-ccad-4f98-84f1-de46542e54c0" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="9531ec2b-18e1-4f51-8e8a-e0c7b5ba1558" LastKnownName="HDDInterfaceType" />
+            </type_NamedElement>
+          </property>
+          <property Id="e4a39aad-0acb-46a1-a1ad-8058087cc285" name="hddType" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0d7ed928-5ac1-4911-8907-a686292227de" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="a851fdde-80ba-4317-a092-9f82dd6a21ac" LastKnownName="HDDType" />
+            </type_NamedElement>
+          </property>
+          <property Id="af4d2922-22d9-4bf3-976c-473c31a73b7b" name="speed" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="5172e5e4-441f-4f30-a82a-39c15dffc202" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e0e3bfce-e1f0-470c-94e3-33fdde029280" LastKnownName="ushort" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="36a17e95-9209-4ce8-919b-13e0b7d76c1f" name="GPU" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="492477f8-2244-4bd8-b657-c3387cc19527" />
+        <generalsInternal>
+          <generalization Id="794ba598-dd8b-4fa0-8674-2abf3565c0b4" isSubstitutable="false">
+            <classMoniker Id="235c2138-7d3c-4de7-8323-a27886b8b081" LastKnownName="Product" />
+            <elementDefinition Id="9eec6643-97f1-4bdb-8b29-7a8280d91557" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="b5490b5c-2ade-4c01-a535-4680a78d8f9a" name="vramClockSpeed" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="32ebbdd4-710f-4195-a49e-ed6c2cb2d512" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e0e3bfce-e1f0-470c-94e3-33fdde029280" LastKnownName="ushort" />
+            </type_NamedElement>
+          </property>
+          <property Id="331b9c67-7972-4534-b421-03d80d5cb967" name="vramSize" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="275eb24a-ca7d-4983-bb0d-e848f9a4c36d" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e0e3bfce-e1f0-470c-94e3-33fdde029280" LastKnownName="ushort" />
+            </type_NamedElement>
+          </property>
+          <property Id="0c89d99a-eb0f-4628-9b85-660456d17fe5" name="gpuModel" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ed3165ab-88af-4c8a-bbd3-7c98371d5c21" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="7ecedad7-f95d-4fa8-9314-e65598ff5278" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+          <property Id="ae18a5d5-4111-47e5-9474-f758eda57205" name="gpuClockSpeed" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e5481b79-c04a-4085-a14e-e2c3c467a140" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e0e3bfce-e1f0-470c-94e3-33fdde029280" LastKnownName="ushort" />
+            </type_NamedElement>
+          </property>
+          <property Id="3d52288d-22c1-4be2-b7a9-d30341a5346c" name="gpuType" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8c526dd6-cf54-4d96-92be-f827ef4e2f4a" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="d79eb6ac-4747-4e8f-a700-7eb2c250a18c" LastKnownName="GPUType" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="60943b34-83b6-478d-9662-723c3ac9e1fa" name="Entity" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="43901871-1a9b-4c37-9145-779b2c26841e" />
+        <ownedAttributesInternal>
+          <property Id="7711213b-f0c2-478a-9310-fa8beba498fe" name="id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="af05da05-f6c2-40ef-ad63-dbe5e7a61de0" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="d28de14a-ed83-4b77-af53-940fef8bd6fe" LastKnownName="int" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="d28de14a-ed83-4b77-af53-940fef8bd6fe" name="int" isAbstract="false" isLeaf="false" cachedFullName="int">
+        <elementDefinition Id="8905d94f-cfa5-49cb-a2d7-968877e3be65" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ff4ed3ad-5385-4f67-8acd-9cfff0c6d84c" name="Manufacturer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="87c9abde-6115-4e56-b5a0-5c0aa7110d86" />
+        <generalsInternal>
+          <generalization Id="8131a340-9b29-4ce8-9b38-5e279b1db980" isSubstitutable="false">
+            <classMoniker Id="60943b34-83b6-478d-9662-723c3ac9e1fa" LastKnownName="Entity" />
+            <elementDefinition Id="2d2e041f-3ccc-4ffc-b6f5-d551c7d57322" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="82832422-ad36-483a-bc46-12ebe3d10639" name="name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7588c3d7-c292-4223-ab39-4fbb84142a6f" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="edaaa739-c105-49df-b702-58b5e8735982" name="IManufacturer" isAbstract="false" isLeaf="false" cachedFullName="ComputerShop2.0Model::IManufacturer">
+        <elementDefinition Id="eff0a954-1813-478a-b650-403e44ee334a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="7e9ec8f4-33db-4add-b641-6cfb5dba45c7" name="CPUType" isAbstract="false" isLeaf="false" cachedFullName="ComputerShop2.0Model::CPUType">
+        <elementDefinition Id="a5bb0f81-e77b-47af-adb6-40758296db65" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="ddd6e603-dd8f-4254-93f9-7dfd1f2f1dd3" name="CPUFormFactor" isAbstract="false" isLeaf="false" cachedFullName="ComputerShop2.0Model::CPUFormFactor">
+        <elementDefinition Id="4766e245-0684-4c90-91d2-30e2f5caa676" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="d79eb6ac-4747-4e8f-a700-7eb2c250a18c" name="GPUType" isAbstract="false" isLeaf="false" cachedFullName="ComputerShop2.0Model::GPUType">
+        <elementDefinition Id="64132b5e-6465-47ad-acd0-40dbd3611080" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b7cfdfb9-0dfe-4a6a-84fe-4b2f0e7994f1" name="HDDFormFactor" isAbstract="false" isLeaf="false" cachedFullName="ComputerShop2.0Model::HDDFormFactor">
+        <elementDefinition Id="895a154c-609b-49ea-9983-9488759067bb" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="9531ec2b-18e1-4f51-8e8a-e0c7b5ba1558" name="HDDInterfaceType" isAbstract="false" isLeaf="false" cachedFullName="ComputerShop2.0Model::HDDInterfaceType">
+        <elementDefinition Id="138e28a5-3c39-4967-99af-8b7a9050e862" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="a851fdde-80ba-4317-a092-9f82dd6a21ac" name="HDDType" isAbstract="false" isLeaf="false" cachedFullName="ComputerShop2.0Model::HDDType">
+        <elementDefinition Id="ef11855c-f739-4414-b3ed-b608e2d6e69f" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="3bd73f8c-d0c7-4da9-ac6e-01eab7843ce5" name="DDRVersion" isAbstract="false" isLeaf="false" cachedFullName="ComputerShop2.0Model::DDRVersion">
+        <elementDefinition Id="1cf6ec8a-b1da-43c5-bf23-fe010ec3d803" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="204ae69b-7099-471d-894f-3ac052faf928" name="RAMFormFactor" isAbstract="false" isLeaf="false" cachedFullName="ComputerShop2.0Model::RAMFormFactor">
+        <elementDefinition Id="6bec7e09-3caf-4cf8-9a43-6439080ffe79" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="d0cb74b2-28fe-40ca-8d3c-059673cb7b0f" name="IGPU" isAbstract="false" isLeaf="false" cachedFullName="ComputerShop2.0Model::IGPU">
+        <elementDefinition Id="66cea033-ee51-46f8-b21d-24d8fc5bd2a2" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="9f9442dd-5f06-4bd4-8e83-1d095f9da4ff" name="IHDD" isAbstract="false" isLeaf="false" cachedFullName="ComputerShop2.0Model::IHDD">
+        <elementDefinition Id="95ca5b88-a18c-4456-8124-53b2fa95638a" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="84b732ca-26c9-4d60-b6a2-25512bb5f5d3" name="ComputerShop2.0Model">
+    <elementDefinition Id="6be23817-608d-4d8e-8e29-f2a9935e76bd" />
+    <profileInstances>
+      <packageHasProfileInstances Id="2f422055-a4fc-4cb4-895e-f7ef74bf9223">
+        <profileInstance Id="ab866343-55ee-4a7d-b389-4e2216db5509" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="4e3ef607-c62b-4ed2-b14e-92ff33a626db">
+        <profileInstance Id="97a982e8-acc9-4fa4-bccc-2f4013575f6e" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

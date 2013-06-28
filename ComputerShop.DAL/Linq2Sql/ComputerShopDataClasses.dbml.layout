@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 14.25, 20.125" name="ComputerShopDataClasses">
+  <DataContextMoniker Name="/ComputerShopDataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="4322e5f2-8ca6-4f17-a8fa-54f75d4318df" absoluteBounds="1.125, 7.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/ComputerShopDataClassesDataContext/CPU" />
+      <nestedChildShapes>
+        <elementListCompartment Id="59cfd90d-1169-4e3c-ac09-e97dc1cbebd7" absoluteBounds="1.1400000000000001, 8.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="42d9faec-bff1-4896-be2d-c009e8eafb69" absoluteBounds="1.125, 11, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/ComputerShopDataClassesDataContext/RamModule" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f4b810e5-49e4-4547-ba3e-d4c67d2831d7" absoluteBounds="1.1400000000000001, 11.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c086118d-0980-425b-b8a4-d74b2d6b5248" absoluteBounds="12, 12.25, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/ComputerShopDataClassesDataContext/DesktopGPU" />
+      <nestedChildShapes>
+        <elementListCompartment Id="002bcd41-5fb1-41d5-bb4d-13d0b596a81e" absoluteBounds="12.015, 12.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="49b88ef9-0c46-4dc3-8f5a-203ec7755351" absoluteBounds="12, 10.25, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/ComputerShopDataClassesDataContext/DesktopHDD" />
+      <nestedChildShapes>
+        <elementListCompartment Id="43eb2130-e9f0-46f8-9487-368e1a643c53" absoluteBounds="12.015, 10.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d6846186-5a05-4af5-a909-57884d879d00" absoluteBounds="11.875, 8, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/ComputerShopDataClassesDataContext/DesktopRamModule" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f7e3c790-b1ac-4bb2-b385-ded952b6dab3" absoluteBounds="11.89, 8.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="eae1f83d-0b76-49ab-9980-729403bdf54b" absoluteBounds="6.75, 6.125, 2, 1.9631982421874987">
+      <DataClassMoniker Name="/ComputerShopDataClassesDataContext/Desktop" />
+      <nestedChildShapes>
+        <elementListCompartment Id="426ff8fa-3c54-40e0-844b-2e8f4fdf6e14" absoluteBounds="6.7650000000000006, 6.5850000000000009, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="605fb8d3-4d8e-474d-bc69-90814c95abf4" absoluteBounds="1.125, 17.125, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/ComputerShopDataClassesDataContext/GPU" />
+      <nestedChildShapes>
+        <elementListCompartment Id="20dd674a-d56d-445d-b61a-c379eb4e082e" absoluteBounds="1.1400000000000001, 17.585, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ca186ccd-08b0-4242-a59f-be19751ef659" absoluteBounds="1.125, 14.125, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/ComputerShopDataClassesDataContext/HDD" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e52ba5f3-51a6-48b7-91f1-a0119cebf294" absoluteBounds="1.1400000000000001, 14.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="19973812-260a-4ef5-8dc7-5d3f53883b90" absoluteBounds="11.375, 15.5, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/ComputerShopDataClassesDataContext/LaptopRamModule" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b75a1f03-8476-4c5f-840d-9da2ec604182" absoluteBounds="11.39, 15.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="75411162-f0d3-4752-81ae-db2dc5aae699" absoluteBounds="8.875, 15.5, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/ComputerShopDataClassesDataContext/Laptop" />
+      <nestedChildShapes>
+        <elementListCompartment Id="13f2ab69-61ab-492f-806c-a32f9f73ad5f" absoluteBounds="8.89, 15.96, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6ce72900-1b52-48c5-be68-14b660688835" absoluteBounds="6.25, 11.5, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/ComputerShopDataClassesDataContext/Manufacturer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eda55da2-4e5a-47ea-8ed2-76e56c4c8e39" absoluteBounds="6.265, 11.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.125 : 11.0015374615385); (3.5 : 10.6265374615385); (3.5 : 8.92294505664063); (7.03385291666667 : 8.92294505664063 : JumpStart); (7.20051958333333 : 8.92294505664063 : JumpEnd); (8.58854416666667 : 8.92294505664063 : JumpStart); (8.75521083333333 : 8.92294505664063 : JumpEnd); (11.875 : 8.92294505664063)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ComputerShopDataClassesDataContext/RamModule/RamModule_DesktopRamModule" />
+      <nodes>
+        <classShapeMoniker Id="42d9faec-bff1-4896-be2d-c009e8eafb69" />
+        <classShapeMoniker Id="d6846186-5a05-4af5-a909-57884d879d00" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.6718775 : 8.0881982421875); (8.6718775 : 10.5781225); (12 : 10.5781225)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ComputerShopDataClassesDataContext/Desktop/Desktop_DesktopHDD" />
+      <nodes>
+        <classShapeMoniker Id="eae1f83d-0b76-49ab-9980-729403bdf54b" />
+        <classShapeMoniker Id="49b88ef9-0c46-4dc3-8f5a-203ec7755351" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.75 : 7.0624995); (12.875 : 7.0624995); (12.875 : 8)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ComputerShopDataClassesDataContext/Desktop/Desktop_DesktopRamModule" />
+      <nodes>
+        <classShapeMoniker Id="eae1f83d-0b76-49ab-9980-729403bdf54b" />
+        <classShapeMoniker Id="d6846186-5a05-4af5-a909-57884d879d00" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.125 : 14.1265374615385); (3.5 : 13.7515374615385); (3.5 : 11.03906375); (6.38541666666667 : 11.03906375 : JumpStart); (6.55208333333333 : 11.03906375 : JumpEnd); (7.03385291666667 : 11.03906375 : JumpStart); (7.20051958333333 : 11.03906375 : JumpEnd); (12 : 11.03906375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ComputerShopDataClassesDataContext/HDD/HDD_DesktopHDD" />
+      <nodes>
+        <classShapeMoniker Id="ca186ccd-08b0-4242-a59f-be19751ef659" />
+        <classShapeMoniker Id="49b88ef9-0c46-4dc3-8f5a-203ec7755351" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.125 : 12.1934319283854); (3.41666666666667 : 12.1934319283854 : JumpStart); (3.58333333333333 : 12.1934319283854 : JumpEnd); (6 : 12.1934319283854); (6 : 13.8862939453125); (6.63541416666667 : 13.8862939453125 : JumpStart); (6.80208083333333 : 13.8862939453125 : JumpEnd); (7.16666666666667 : 13.8862939453125 : JumpStart); (7.33333333333333 : 13.8862939453125 : JumpEnd); (7.69791916666667 : 13.8862939453125 : JumpStart); (7.86458583333333 : 13.8862939453125 : JumpEnd); (9.79166666666667 : 13.8862939453125 : JumpStart); (9.95833333333333 : 13.8862939453125 : JumpEnd); (12.375 : 13.8862939453125); (12.375 : 15.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ComputerShopDataClassesDataContext/RamModule/RamModule_LaptopRamModule" />
+      <nodes>
+        <classShapeMoniker Id="42d9faec-bff1-4896-be2d-c009e8eafb69" />
+        <classShapeMoniker Id="19973812-260a-4ef5-8dc7-5d3f53883b90" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.875 : 16.1931469726563); (11.375 : 16.1931469726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ComputerShopDataClassesDataContext/Laptop/Laptop_LaptopRamModule" />
+      <nodes>
+        <classShapeMoniker Id="75411162-f0d3-4752-81ae-db2dc5aae699" />
+        <classShapeMoniker Id="19973812-260a-4ef5-8dc7-5d3f53883b90" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.125 : 16.0825512695313); (7.16666666666667 : 16.0825512695313 : JumpStart); (7.33333333333333 : 16.0825512695313 : JumpEnd); (8.875 : 16.0825512695313)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ComputerShopDataClassesDataContext/HDD/HDD_Laptop" />
+      <nodes>
+        <classShapeMoniker Id="ca186ccd-08b0-4242-a59f-be19751ef659" />
+        <classShapeMoniker Id="75411162-f0d3-4752-81ae-db2dc5aae699" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.25 : 11.7842159641927); (3.125 : 11.7842159641927)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ComputerShopDataClassesDataContext/Manufacturer/Manufacturer_RamModule" />
+      <nodes>
+        <classShapeMoniker Id="6ce72900-1b52-48c5-be68-14b660688835" />
+        <classShapeMoniker Id="42d9faec-bff1-4896-be2d-c009e8eafb69" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.11718625 : 11.5); (7.11718625 : 8.0881982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ComputerShopDataClassesDataContext/Manufacturer/Manufacturer_Desktop" />
+      <nodes>
+        <classShapeMoniker Id="6ce72900-1b52-48c5-be68-14b660688835" />
+        <classShapeMoniker Id="eae1f83d-0b76-49ab-9980-729403bdf54b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.7187475 : 12.6939925130208); (6.7187475 : 15.1045443655349); (3.125 : 15.1045443655349)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ComputerShopDataClassesDataContext/Manufacturer/Manufacturer_HDD" />
+      <nodes>
+        <classShapeMoniker Id="6ce72900-1b52-48c5-be68-14b660688835" />
+        <classShapeMoniker Id="ca186ccd-08b0-4242-a59f-be19751ef659" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.7812525 : 12.6939925130208); (7.7812525 : 16.8493766276042); (8.875 : 16.8493766276042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ComputerShopDataClassesDataContext/Manufacturer/Manufacturer_Laptop" />
+      <nodes>
+        <classShapeMoniker Id="6ce72900-1b52-48c5-be68-14b660688835" />
+        <classShapeMoniker Id="75411162-f0d3-4752-81ae-db2dc5aae699" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.46875 : 11.5); (6.46875 : 9.4142223655599); (3.125 : 9.4142223655599)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ComputerShopDataClassesDataContext/Manufacturer/Manufacturer_CPU" />
+      <nodes>
+        <classShapeMoniker Id="6ce72900-1b52-48c5-be68-14b660688835" />
+        <classShapeMoniker Id="4322e5f2-8ca6-4f17-a8fa-54f75d4318df" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.46093625 : 8.0881982421875); (8.46093625 : 13.1963932291667); (9.79166666666667 : 13.1963932291667 : JumpStart); (9.95833333333333 : 13.1963932291667 : JumpEnd); (12 : 13.1963932291667)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ComputerShopDataClassesDataContext/Desktop/Desktop_DesktopGPU" />
+      <nodes>
+        <classShapeMoniker Id="eae1f83d-0b76-49ab-9980-729403bdf54b" />
+        <classShapeMoniker Id="c086118d-0980-425b-b8a4-d74b2d6b5248" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.125 : 19.0761539713542); (13.71875 : 19.0761539713542); (13.71875 : 13.6362939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ComputerShopDataClassesDataContext/GPU/GPU_DesktopGPU" />
+      <nodes>
+        <classShapeMoniker Id="605fb8d3-4d8e-474d-bc69-90814c95abf4" />
+        <classShapeMoniker Id="c086118d-0980-425b-b8a4-d74b2d6b5248" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.125 : 8.53682414941407); (7.03385291666667 : 8.53682414941407 : JumpStart); (7.20051958333333 : 8.53682414941407 : JumpEnd); (7.78906125 : 8.53682414941407); (7.78906125 : 8.0881982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ComputerShopDataClassesDataContext/CPU/CPU_Desktop" />
+      <nodes>
+        <classShapeMoniker Id="4322e5f2-8ca6-4f17-a8fa-54f75d4318df" />
+        <classShapeMoniker Id="eae1f83d-0b76-49ab-9980-729403bdf54b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.25 : 12.6939925130208); (7.25 : 18.0693244856771); (3.125 : 18.0693244856771)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ComputerShopDataClassesDataContext/Manufacturer/Manufacturer_GPU" />
+      <nodes>
+        <classShapeMoniker Id="6ce72900-1b52-48c5-be68-14b660688835" />
+        <classShapeMoniker Id="605fb8d3-4d8e-474d-bc69-90814c95abf4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.125 : 9.69111352001953); (3.41666666666667 : 9.69111352001953 : JumpStart); (3.58333333333333 : 9.69111352001953 : JumpEnd); (6.38541666666667 : 9.69111352001953 : JumpStart); (6.55208333333333 : 9.69111352001953 : JumpEnd); (7.03385291666667 : 9.69111352001953 : JumpStart); (7.20051958333333 : 9.69111352001953 : JumpEnd); (8.58854416666667 : 9.69111352001953 : JumpStart); (8.75521083333333 : 9.69111352001953 : JumpEnd); (9.875 : 9.69111352001953); (9.875 : 15.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ComputerShopDataClassesDataContext/CPU/CPU_Laptop" />
+      <nodes>
+        <classShapeMoniker Id="4322e5f2-8ca6-4f17-a8fa-54f75d4318df" />
+        <classShapeMoniker Id="75411162-f0d3-4752-81ae-db2dc5aae699" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.125 : 17.5346622428385); (7.16666666666667 : 17.5346622428385 : JumpStart); (7.33333333333333 : 17.5346622428385 : JumpEnd); (8.875 : 17.5346622428385)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ComputerShopDataClassesDataContext/GPU/GPU_Laptop" />
+      <nodes>
+        <classShapeMoniker Id="605fb8d3-4d8e-474d-bc69-90814c95abf4" />
+        <classShapeMoniker Id="75411162-f0d3-4752-81ae-db2dc5aae699" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

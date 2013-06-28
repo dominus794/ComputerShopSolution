@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="466d351c-a04c-44ab-b116-d749994a10e6" name="ComputerShop2.0" linkedPackageId="748a1c17-2773-46b9-b7d4-8b5e39adf9af" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="508ca4ad-51e6-4643-bdb8-edd986ec4cc7">
+      <profileInstance Id="d295694c-005c-459b-b0a0-53b1dcc4ae96" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="36c28c74-0259-4cb3-a3eb-26d3f5b9382e">
+      <profileInstance Id="5bf8afb7-92cc-4519-b5f0-b8c1762f4808" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <componentModelHasComponents>
+      <component Id="94eb989e-aaa1-498b-a421-2e6e5bf821a5" name="ComputerShop.Domain.dll" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3bf620a0-8666-4deb-a820-9488f01ee228" />
+        <suppliersInternal>
+          <dependency Id="308ec041-3a20-4907-b070-7edd0b1e5320">
+            <componentMoniker Id="4be98c69-a5ef-4c69-bcdf-8bedda9e8526" LastKnownName="ComputerShop.Interfaces.dll" />
+            <elementDefinition Id="8e4749c3-c555-4fa6-a39b-9623d5843d55" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="4be98c69-a5ef-4c69-bcdf-8bedda9e8526" name="ComputerShop.Interfaces.dll" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b8b09f05-6c51-44a8-ac3f-510396aa0a80" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="64c8c34e-5837-4299-8c7d-c1819e804500" name="ComputerShop.Database.dll" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="42bf32a5-81ae-4e13-a9f4-0fd469907cbc" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="ee1ca531-8228-4f8f-916e-27fb9b060e1c" name="ComputerShop.DataMappers.dll" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ccadebdb-61ba-4ac7-ace3-901e1443c514" />
+        <suppliersInternal>
+          <dependency Id="a036f03a-b281-4b7e-8247-74362faaaecb">
+            <componentMoniker Id="64c8c34e-5837-4299-8c7d-c1819e804500" LastKnownName="ComputerShop.Database.dll" />
+            <elementDefinition Id="dab6c855-0749-40be-b067-c1cd2e7074eb" />
+          </dependency>
+          <dependency Id="729e2901-aeaf-413f-8c52-731a65909563">
+            <componentMoniker Id="94eb989e-aaa1-498b-a421-2e6e5bf821a5" LastKnownName="ComputerShop.Domain.dll" />
+            <elementDefinition Id="68cc3d4c-1d88-4792-bd48-a739fc0faff9" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="d6d14e8d-2aed-45e1-814a-bcce4b80bded" name="Client Application" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3b059942-4b67-45ca-893c-e57467eb76e4" />
+        <suppliersInternal>
+          <dependency Id="d61bedca-1854-4d32-bfa7-22410c871c9c">
+            <componentMoniker Id="94eb989e-aaa1-498b-a421-2e6e5bf821a5" LastKnownName="ComputerShop.Domain.dll" />
+            <elementDefinition Id="8f910505-d594-40e0-b7fd-0bbe3d31c4e6" />
+          </dependency>
+          <dependency Id="3b923c3d-2958-46fb-bd93-05837c9dd825">
+            <componentMoniker Id="4be98c69-a5ef-4c69-bcdf-8bedda9e8526" LastKnownName="ComputerShop.Interfaces.dll" />
+            <elementDefinition Id="5ede2e85-0498-4e28-96b5-c88ace64b071" />
+          </dependency>
+          <dependency Id="df2d224f-b9f8-4d83-8083-2943d5b6b8ad">
+            <componentMoniker Id="ee1ca531-8228-4f8f-916e-27fb9b060e1c" LastKnownName="ComputerShop.DataMappers.dll" />
+            <elementDefinition Id="abc77bc1-fd38-428b-b404-c9799f7bd10e" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+  </packagedElements>
+  <package Id="748a1c17-2773-46b9-b7d4-8b5e39adf9af" name="ComputerShop2.0Model">
+    <elementDefinition Id="6be23817-608d-4d8e-8e29-f2a9935e76bd" />
+  </package>
+</componentModel>

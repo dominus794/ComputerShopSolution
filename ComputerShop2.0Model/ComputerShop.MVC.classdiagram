@@ -1,0 +1,673 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="6dfada22-021d-4ec8-a3a9-e9b04853df8b" name="ComputerShop.MVC" linkedPackageId="06586781-807d-4a4d-a2af-7459e029d39b" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="aa74db46-288b-4484-8c9a-fd6c3370c641">
+      <elementDefinition Id="a765cc1e-8677-4f0c-9ca7-f8bbd979370c" />
+      <body>Creates a RamModule object and persists it using the repository.</body>
+      <annotatedElements>
+        <classMoniker Id="94af505a-a8ae-42d3-bdfc-4145a1113015" LastKnownName="RamModuleFactory" />
+      </annotatedElements>
+    </comment>
+    <comment Id="ce80aa3d-29cc-4bd0-bb2a-3b3331f3d283">
+      <elementDefinition Id="e0713069-b9c0-45fd-88e8-a3b8e90f819e" />
+      <body>Displays user prompts to gather information to create a RamModule</body>
+      <annotatedElements>
+        <classMoniker Id="65a68db4-bff6-442f-81b4-bfa0c778c58b" LastKnownName="RamModuleFactoryView" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="711bcf8f-2cae-4f7f-9907-a7e85a3d5d90" name="IManufacturerFactoryView" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7d214ba6-1fe3-41cf-990c-e126eac4fe21" />
+        <ownedOperations>
+          <operation Id="04ce0836-ad25-4d51-919e-ef392aa795f2" name="EnterManufacturerName" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f41726fc-139c-44ec-9b87-a794e08190f2" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="7dd7180d-96fe-41a0-b970-998068f154bb" name="IManufacturerFactoryController" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="25b24387-42df-4ef7-a658-3782b410ea88" />
+        <targetEnds>
+          <association Id="618b52a0-f80f-402b-b549-8fcf89e26079" isDerived="false" sourceEndRoleName="IManufacturerFactoryController" targetEndRoleName="IManufacturerFactoryView" isLeaf="false" name="gets user input from" isAbstract="false">
+            <interfaceMoniker Id="711bcf8f-2cae-4f7f-9907-a7e85a3d5d90" LastKnownName="IManufacturerFactoryView" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="880c255a-c3b1-4239-ab3f-7cf84eabd547" name="IManufacturerFactoryController" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b0d6f38d-9ad6-4a31-8607-96335fcfe559" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="043253a9-c793-4137-a038-c895ebf41116" name="IManufacturerFactoryView" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ad780240-8501-400d-a559-202df781ccda" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ff7398b1-e6d2-4c66-ba9f-bcd64bcf622c" />
+          </association>
+          <association Id="42735be3-132e-4848-8c13-99218c23ed36" isDerived="false" sourceEndRoleName="IManufacturerFactoryController" targetEndRoleName="IManufacturerFactory" isLeaf="false" name="passes user input to" isAbstract="false">
+            <interfaceMoniker Id="2d1373d3-72b1-4550-af83-a5781ba97009" LastKnownName="IManufacturerFactory" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ea26372e-46ce-4b02-9e33-3daa259b2f95" name="IManufacturerFactoryController" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1658c980-8729-4585-96f5-e57fb325ab6b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="870afa50-5a91-46e4-a126-3df62a2f069d" name="IManufacturerFactory" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b6dd7140-eb3c-47e7-a79e-80f20bdd62e1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="974ead01-fc0e-4f8e-b945-68d784dc1f14" />
+          </association>
+        </targetEnds>
+        <ownedOperations>
+          <operation Id="54dc7b35-7bad-4cae-a2fb-c28d89c59045" name="CreateManufacturer" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6f3d5ff4-9ee7-46cc-960c-072f8368ebd2" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="9c5ebb75-e11a-4af5-92e9-a63117d41fee" name="IDesktopFactoryView" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="daf09b29-d158-4dd9-a717-8ad9b3135570" />
+        <ownedOperations>
+          <operation Id="2d7bdaad-c308-496e-8a86-773632e9b0f0" name="EnterModelName" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b265f848-f1a8-4102-8d33-af739a6637d7" />
+          </operation>
+          <operation Id="e3562b0d-4a8c-4489-a5b4-2794bf9b181b" name="EnterPrice" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c599c43b-dbaa-4011-966d-665897249c99" />
+          </operation>
+          <operation Id="81a6ee35-b689-4f3e-8fa7-feb90c7329a6" name="SelectManufacturer" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="489f33a5-7b7b-4035-a471-3d7af1428bf1" />
+          </operation>
+          <operation Id="53ff6d6b-f113-414f-9b3a-a28ddeea4455" name="SelectCPU" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f5549438-1c92-4844-a365-7d55730a4602" />
+          </operation>
+          <operation Id="f8b7d983-5da3-4bab-b000-7ae9830ec155" name="EnterNoOfRamModules" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="38bc07ec-bb34-488f-bc64-9f1b6271070b" />
+          </operation>
+          <operation Id="07bce5a0-0f2d-412a-98de-66d210dce749" name="SelectRamModule" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8e679bd8-c437-40a6-9559-95e880f6eade" />
+          </operation>
+          <operation Id="b556d86a-39c4-4a1d-ad82-229332edd3fa" name="EnterNoOfHDDs" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4bbf034a-49e7-4d82-a408-f23d654497e2" />
+          </operation>
+          <operation Id="49e7be5a-ae8e-4493-b840-2be6e4c3ab31" name="SelectHDD" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="be8e03a1-3961-4ea9-8d2c-2fbb8772a595" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="c2689388-d94b-48c9-8ed7-d83f030745d5" name="IDesktopFactoryController" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9ecff1f6-4b53-4678-9855-0172a6e7d2bb" />
+        <ownedOperations>
+          <operation Id="59af4800-5219-495a-b989-03e5d5d4a59e" name="BuildDesktop" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="35651073-87ef-4c69-8da2-d5c956095a43" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4d6047c0-32bb-446b-afb4-57d0ef67cef1" direction="Return" isUnique="false">
+                  <elementDefinition Id="e55efd39-5114-4d9d-9110-2c06ce824768" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f6ef5f1b-15ee-4c48-b9f5-8ca4f4a66c96" LastKnownName="IDesktop" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="cb3c5d05-4de0-4a2c-a3fb-2c0d63d8f283" name="EnterModelName" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d564a062-b71b-451b-aaff-6c60442450a1" />
+          </operation>
+          <operation Id="c517f892-8e6f-459e-bc3f-64e229326c31" name="SelectManufacturer" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="50aae3cb-55c6-4d7c-82fe-73e2ecf1243e" />
+          </operation>
+          <operation Id="b63f8418-9029-4fc4-8f22-b8cad6160758" name="EnterPrice" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c4f77683-c8e3-4674-a329-146f9437f0c8" />
+          </operation>
+          <operation Id="25bbea2f-8df7-46df-96e5-e0c2391aa72e" name="EnterNoOfHDDs" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7445122f-97ef-4876-839a-9ed1c1e02064" />
+          </operation>
+          <operation Id="cbf35eed-0f1a-4890-be2a-9aa55de2c304" name="EnterNoOfRamModules" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="74ee3067-a21b-4239-8071-003608685529" />
+          </operation>
+          <operation Id="4b1a091c-ae93-4d64-a4cc-85b75b92031d" name="SelectCPU" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a0bc8b41-4725-41ff-b380-b87b6bf9f1a5" />
+          </operation>
+          <operation Id="663cf19e-4fa8-4cc4-b063-85a5eb257037" name="SelectHDD" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="94d9ba8a-aa36-42a0-847f-9ce8749c3f7a" />
+          </operation>
+          <operation Id="f0587173-fc89-4b60-a40d-bf83d5175dfb" name="SelectRamModule" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a79561e7-9db4-4730-919e-20f6572b383c" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="f6ef5f1b-15ee-4c48-b9f5-8ca4f4a66c96" name="IDesktop" isAbstract="false" isLeaf="false" cachedFullName="ComputerShop2.0Model::IDesktop">
+        <elementDefinition Id="281c3d97-9cdc-4dce-846b-68335c3fabcd" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="c43648c0-38bf-4b49-a2eb-63f1628d8af6" name="IRamModulesSelectorController" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="21c1f2a9-90ab-4748-aec5-d328ae86a925" />
+        <ownedOperations>
+          <operation Id="77b06f83-8614-4f29-b140-c2fe95bd6914" name="GetSelectedRamModule" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="995a5081-4bb2-41ee-8d20-836b0cfe876f" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="d1d21667-083d-4db5-a70c-59c72ee350f4" name="IRamModuleSelectorView" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="462245e9-1355-4daa-88ef-fe3646cf79f7" />
+        <ownedOperations>
+          <operation Id="d57b0f2c-35a0-457d-b434-311787e2aed9" name="DisplayRamModulesList" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3fdd81f1-827f-4b21-b7d3-0f1c135494cb" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="2d1373d3-72b1-4550-af83-a5781ba97009" name="IManufacturerFactory" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9db5ade8-7e46-4d7c-9ff2-50ce1f30190e" />
+        <targetEnds>
+          <association Id="55ce8d74-5ec6-42f3-93bc-22ff67f39467" isDerived="false" sourceEndRoleName="IManufacturerFactory" targetEndRoleName="IRepository" isLeaf="false" name="stores into" isAbstract="false">
+            <interfaceMoniker Id="65960c9f-c518-463c-9554-50f47071a3bd" LastKnownName="IRepository" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5c6f16a0-6508-4a8f-bd6d-1bb1579b20aa" name="IManufacturerFactory" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="01cb1817-6efa-48b6-9057-10c2aa8f0544" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="83df3b6d-5c5c-4ee5-be4d-3b6642fad36f" name="IRepository" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5e6d206c-011e-4873-bbc6-c87d34cb710d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="155f67fa-c9c0-41e8-a5e1-93eaacb62ab5" />
+          </association>
+        </targetEnds>
+        <ownedOperations>
+          <operation Id="6292dfef-a9a5-4b69-b7b9-81b3fd1d746a" name="CreateaManufacturer" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2a4d0830-2994-49ab-86af-98b0df338cda" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="52758499-894a-4ea4-a5a7-83a58094a34f" name="name" direction="In" isUnique="false">
+                  <elementDefinition Id="93564335-06cf-47f6-8c5a-3161dadd3fde" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e042477d-5d80-424b-a292-8bb718ff322e" direction="Return">
+                  <elementDefinition Id="52c97381-6ccd-400b-a3b5-18e67b64597c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="4bb47971-57ba-4bc7-b2a6-150daa707d8f" LastKnownName="Manufacturer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="65960c9f-c518-463c-9554-50f47071a3bd" name="IRepository" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4814661c-fe33-4b02-9e4d-5afb9b52b5f1" />
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature Id="dc985341-2ab9-44ff-bb77-f40e4cd98645" parameters="" isLeaf="false">
+            <elementDefinition Id="45524424-4b83-45e7-b586-547204b99430" />
+            <ownedParameters>
+              <classifierTemplateParameter Id="2742848b-1dfc-4fee-804c-005af0212c41">
+                <elementDefinition Id="546f1576-5260-4dad-9db1-d5eb61671c85" />
+                <ownedParameterableElement>
+                  <Interface Id="5e7d3a98-f207-4342-8225-8866bd359681" name="TEntity" isAbstract="false" isLeaf="false">
+                    <elementDefinition Id="46521c6d-4f99-4ca3-af90-c241f750fef8" />
+                  </Interface>
+                </ownedParameterableElement>
+                <constrainingClassifier>
+                  <referencedTypeMoniker Id="86c3bc53-fed3-46a6-addc-28723983af7b" LastKnownName="IEntity" />
+                </constrainingClassifier>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+        <ownedAttributes>
+          <property Id="c9c34166-fa59-404c-a7fd-816c7e001d81" name="entitys" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="37027bb5-6bf5-4b6b-adad-d415593bf346" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="ea4ee09c-40b0-453d-af18-fa94da3dec06" LastKnownName="List&lt;TEntity&gt;" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributes>
+        <ownedOperations>
+          <operation Id="df157039-8a72-423d-91f4-64021a13ed7b" name="GetByID" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="51366f83-555e-480d-b5bf-8fd7b9f49fe3" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="31c18c43-246c-46b9-86cd-11208a2551d0" name="id" direction="In" isUnique="false">
+                  <elementDefinition Id="41f228b5-44d3-47d2-a211-8f3c640c94ea" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ee817580-6dba-4179-b3d0-03d41f5a7cde" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7ca039a5-008a-4c8a-992e-d4aea5b6400e" direction="Return" isUnique="false">
+                  <elementDefinition Id="7ae61a0e-7b85-446e-a6f8-8cea72914dc1" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="18557c9a-437b-483f-90ff-d0c240761c3d" LastKnownName="TEntity" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="9ca8ec24-6768-4220-b62d-e3d300696722" name="Remove" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="03780df2-db06-4b63-a689-4c25018c5bdb" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8817f5ef-c8ce-4be2-87ea-5fc0958be9e9" name="entity" direction="In" isUnique="false">
+                  <elementDefinition Id="2b85c808-17c1-4982-ab8d-b1e9460744e6" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="18557c9a-437b-483f-90ff-d0c240761c3d" LastKnownName="TEntity" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="c9fc9b86-4808-46f1-8682-23a0d4858e9a" name="Save" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5ed079a0-748c-44f6-9015-a41c1c53ae0a" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ff675010-89b8-4b73-b757-f4c4becb172e" name="entity" direction="In" isUnique="false">
+                  <elementDefinition Id="ba1340c4-b24e-47a7-b43a-12f70628ccde" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="18557c9a-437b-483f-90ff-d0c240761c3d" LastKnownName="TEntity" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="eb0de69c-21fa-4a7d-b6ed-b41181b3d401" name="Add" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d629b517-a634-4109-ac59-5bef9ab4b92f" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="733602cc-79f9-46ff-a073-1f15e0ced9fb" name="entity" direction="In" isUnique="false">
+                  <elementDefinition Id="d718b55d-1e84-4d6c-aeb1-aef7f7423096" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="18557c9a-437b-483f-90ff-d0c240761c3d" LastKnownName="TEntity" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="98b6d1e5-ce0c-46f4-a482-67e799801ba2" name="GetAll" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="32533da8-d95f-43e3-9924-ce060ca6d036" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a9040610-d2d1-4d50-a414-d35c68932640" direction="Return" isUnique="false">
+                  <lowerValueInternal>
+                    <literalString Id="4cf2081c-7693-4781-a5c6-26de9f003c48" name="Lower" value="*">
+                      <elementDefinition Id="f2fba666-c03e-4642-b3ee-0c75013acf82" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="45878334-1ba7-41f5-8e99-9d9146ea4ce0" name="Upper" value="*">
+                      <elementDefinition Id="928c70d2-1e1f-4ba4-925a-b0947d99d0d5" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="7d6b58f9-6bb4-48d2-a2ba-a2992a6a5ddc" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="195a8a77-e660-4b9a-a94f-fc602a5eeaa0" LastKnownName="TEntity" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="ea4ee09c-40b0-453d-af18-fa94da3dec06" name="List&lt;TEntity&gt;" isAbstract="false" isLeaf="false" cachedFullName="List&lt;TEntity&gt;">
+        <elementDefinition Id="ce49c8ea-c887-41bd-8b6e-9b7443c2d020" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="ee817580-6dba-4179-b3d0-03d41f5a7cde" name="int" isAbstract="false" isLeaf="false" cachedFullName="int">
+        <elementDefinition Id="8905d94f-cfa5-49cb-a2d7-968877e3be65" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="18557c9a-437b-483f-90ff-d0c240761c3d" name="TEntity" isAbstract="false" isLeaf="false" cachedFullName="TEntity">
+        <elementDefinition Id="71e43c21-4ad0-41fd-875f-38a65b6f8f70" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="86c3bc53-fed3-46a6-addc-28723983af7b" name="IEntity" isAbstract="false" isLeaf="false" cachedFullName="ComputerShop2.0Model::IEntity">
+        <elementDefinition Id="9c407840-0978-4598-a69e-ac48292045a2" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="4bb47971-57ba-4bc7-b2a6-150daa707d8f" name="Manufacturer" isAbstract="false" isLeaf="false" cachedFullName="ComputerShop2.0Model::Manufacturer">
+        <elementDefinition Id="87c9abde-6115-4e56-b5a0-5c0aa7110d86" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="94af505a-a8ae-42d3-bdfc-4145a1113015" name="RamModuleFactory" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1553d043-5cc8-43d8-b8e8-8c349645f0e6" />
+        <targetEnds>
+          <association Id="a118ab5a-d348-41bd-9094-5e76a0f01ab9" isDerived="false" sourceEndRoleName="RamModuleFactory" targetEndRoleName="IRepository" isLeaf="false" name="stores into" isAbstract="false">
+            <interfaceMoniker Id="65960c9f-c518-463c-9554-50f47071a3bd" LastKnownName="IRepository" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7e966db2-8474-45fb-b0ed-58efa761a278" name="RamModuleFactory" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4f2984f1-1df3-4e26-9e9d-adc8c352d7ee" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="899cd580-0b8a-468e-a9c7-ec6ce9d1b894" name="IRepository" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c8300259-b8b1-4d88-94e3-695deebe5bf6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="99f3f807-dddf-4cc3-b00d-a03e975431db" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="8c7bee71-a3a4-4a90-89fc-dd7fe5d4118f" name="CreateRamModule" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3c232522-5116-41d1-98fa-f3ee68998950" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="eb30e988-b8cd-481d-8071-ca5732b4cee8" name="manufacturer" direction="In" isUnique="false">
+                  <elementDefinition Id="d4430ce0-f129-4907-9e7e-7bb42c3bdca5" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5a7e695d-992c-446a-b1f7-52abfa5a3c6d" name="model" direction="In" isUnique="false">
+                  <elementDefinition Id="1834aa19-07a3-4f7d-bc27-2611c5d5b429" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="88985f67-62fa-47e1-8d53-07d28e260437" name="price" direction="In" isUnique="false">
+                  <elementDefinition Id="eb3d03bc-3315-4f6e-8ab2-37228354e184" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="454129e4-a7b3-49f5-adee-c6dc4110e651" name="clockspeed" direction="In" isUnique="false">
+                  <elementDefinition Id="7554d723-edd9-40b1-8ced-358e7b2489aa" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ec382088-66b5-4138-bd24-3481352062bb" name="ddrversion" direction="In" isUnique="false">
+                  <elementDefinition Id="580c02e2-91e4-44a0-bc8b-65714374c341" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d325024d-75d1-48b0-bf27-00960a28b91b" name="ramformfactor" direction="In" isUnique="false">
+                  <elementDefinition Id="b8fe66db-9809-4f23-871b-ea63076bbb4d" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="84dc1e2b-0094-41bd-a5a8-74c4eb931972" name="size" direction="In" isUnique="false">
+                  <elementDefinition Id="14feaee4-99aa-4de2-9ead-151b5b5b5647" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a3ace546-3dfb-4b88-ad8e-fb9b1cfd8d63" direction="Return" isUnique="false">
+                  <elementDefinition Id="e093592d-9f0e-42b3-bccb-bf3bfd6072a6" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="62fa1db3-1b37-4009-ac3f-0de9ff704cc5" LastKnownName="RamModule" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="62fa1db3-1b37-4009-ac3f-0de9ff704cc5" name="RamModule" isAbstract="false" isLeaf="false" cachedFullName="ComputerShop2.0Model::RamModule">
+        <elementDefinition Id="2a0e6810-9f9d-4d73-bc50-9371ed782ffd" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="96e0e7e9-a3e7-42a8-b23f-b704140ccda0" name="RamModuleFactoryController" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5b7f861d-2d67-4415-902c-ff28f195d263" />
+        <targetEnds>
+          <association Id="0ff15337-5456-4e89-b953-f9f1ada66710" isDerived="false" sourceEndRoleName="RamModuleFactoryController" targetEndRoleName="RamModuleFactory" isLeaf="false" name="passes user input to" isAbstract="false">
+            <classMoniker Id="94af505a-a8ae-42d3-bdfc-4145a1113015" LastKnownName="RamModuleFactory" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d55d3642-9639-4e8a-9d54-a1605096e5b9" name="RamModuleFactoryController" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f5991e8c-a58c-4c40-9f47-5a0e7e6a2572" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0be37d58-8907-48b2-ad93-b8eff8cc91fc" name="RamModuleFactory" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="08ffdde9-1cdf-4843-963c-fef4086c87a1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3c1e2eb2-9db8-4954-80ff-5694eeddc7f0" />
+          </association>
+          <association Id="0321e4d9-9a72-47de-b4bf-8f7c2d153140" isDerived="false" sourceEndRoleName="RamModuleFactoryController" targetEndRoleName="RamModuleFactoryView" isLeaf="false" name="gets user input from" isAbstract="false">
+            <classMoniker Id="65a68db4-bff6-442f-81b4-bfa0c778c58b" LastKnownName="RamModuleFactoryView" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4eb76e7f-9510-45d4-bc50-48ebed427a56" name="RamModuleFactoryController" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a7ab9737-81b3-474b-bb7d-3c20c6d0e0fe" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c6a0f13c-e3d8-47f5-b08a-609bb6054b03" name="RamModuleFactoryView" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="71e3ea58-d294-4505-ae0d-764a7b79e40f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5daad6fc-43af-480d-a072-51c57c42d691" />
+          </association>
+          <association Id="4f0e24c0-39f7-4b37-8537-13204f63f0da" isDerived="false" sourceEndRoleName="RamModuleFactoryController" targetEndRoleName="ManufacturerSelectorController" isLeaf="false" name="uses" isAbstract="false">
+            <classMoniker Id="6d32de64-ea32-4f2d-b4fe-c3bd23730bff" LastKnownName="ManufacturerSelectorController" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3adbb5bb-ced1-4f0f-9284-ceb21f64f0ab" name="RamModuleFactoryController" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c09e2695-7c51-4d02-8c15-38e2049a29a4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="aeb473e8-c6e3-4e53-8055-423a6a41bf4a" name="ManufacturerSelectorController" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="87020fbe-f029-41db-8c1c-4b45cb88370b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="657982ca-746c-4097-a46b-e27658d4486d" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="a08074d7-2c4e-4b64-bb62-e48d75c3ee15" name="GetManufacturer" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c94be45e-ba5e-4cb2-b613-1f0243bffdc8" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6b7ecd94-0287-4ea7-8769-f62c69813790" direction="Return" isUnique="false">
+                  <elementDefinition Id="4600fe9f-240a-4081-95f2-4ef3b05716ec" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="bf9df14e-7c21-4411-85b6-6df423174b5a" name="GetModelName" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d5b3ba1b-3388-46fa-b05d-eaf848331f44" />
+          </operation>
+          <operation Id="8286c587-c6b9-4712-a3b6-0d5a7d1d4984" name="GetPrice" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a61c9ccd-b5ae-4e0d-af4d-dfd4dcaba971" />
+          </operation>
+          <operation Id="26ee44b1-833f-4a66-b676-8b8433c37127" name="GetClockSpeed" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="73156982-e11d-4671-baa9-850abc2159a2" />
+          </operation>
+          <operation Id="51af78de-a5e6-4e5b-bbc3-0682f112cdc9" name="GetDDRVersion" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="054306c5-6ccd-468e-80f6-594916fa5cfd" />
+          </operation>
+          <operation Id="16ae69df-bd17-482c-b35d-42400a7c9a1a" name="GetRamFormFactor" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="28507658-ddbc-47a2-92bd-53c15bf6eb6b" />
+          </operation>
+          <operation Id="a1aa1be9-b313-4646-b4f0-db1ada48b4f1" name="GetSize" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2741cd32-505d-4c4c-8a50-f9b7508c6b5d" />
+          </operation>
+          <operation Id="87eb3dc6-2d12-4750-8916-adb16a3e2403" name="CreateRamModule" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3d8cfbb7-bda1-4b1f-8e68-7a77121c6fb5" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="65a68db4-bff6-442f-81b4-bfa0c778c58b" name="RamModuleFactoryView" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="bbcf3682-ae16-479b-bdfc-4dbbfe6f9b6f" />
+        <ownedOperationsInternal>
+          <operation Id="4e580e0f-b668-4e1f-a618-d809f902655e" name="EnterModelName" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8500638a-b901-4b16-9d18-831000721e04" />
+          </operation>
+          <operation Id="5f5695e9-2154-41ef-8819-e3a71cea7e76" name="EnterPrice" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3b614dea-3360-426a-9fe3-56281c817a68" />
+          </operation>
+          <operation Id="5066639c-083d-4e16-98fb-46e044feddd8" name="EnterClockSpeed" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="31fd859d-ff08-4299-becf-ca8ced0e6742" />
+          </operation>
+          <operation Id="682312a4-8896-47f5-9751-5b0ae748df66" name="SelectDDRVersion" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c9645034-8c83-43fa-9c11-63a7fea40431" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="044ae90b-844b-4a03-906d-eabe2c988518" direction="Return">
+                  <elementDefinition Id="0cf233ac-3d4a-43be-b4aa-8063dd8dacca" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ea68cfb4-c27b-45b2-bd94-2d3d7691bddc" LastKnownName="DDRVersion" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="c1c69212-5779-4e07-9808-006bf2700eac" name="SelectRamFormFactor" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d00796c7-6c34-4681-b877-acd8ff4215c5" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="78d44383-2865-4e47-9f0d-a72b6ce080eb" direction="Return">
+                  <elementDefinition Id="d4697368-7519-4ff6-8b43-f2d57d562f2d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f7f5180a-0612-470d-b560-40763267975c" LastKnownName="RAMFormFactor" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="fdb09a57-e69b-4518-811d-f5e49d4f5bd9" name="EnterSize" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="960ce211-3197-4abd-a2cc-76623d14478b" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="ea68cfb4-c27b-45b2-bd94-2d3d7691bddc" name="DDRVersion" isAbstract="false" isLeaf="false" cachedFullName="ComputerShop2.0Model::DDRVersion">
+        <elementDefinition Id="1cf6ec8a-b1da-43c5-bf23-fe010ec3d803" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f7f5180a-0612-470d-b560-40763267975c" name="RAMFormFactor" isAbstract="false" isLeaf="false" cachedFullName="ComputerShop2.0Model::RAMFormFactor">
+        <elementDefinition Id="6bec7e09-3caf-4cf8-9a43-6439080ffe79" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="6d32de64-ea32-4f2d-b4fe-c3bd23730bff" name="ManufacturerSelectorController" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="58a0b4a9-8e25-4b7e-a15f-fd130e45c7f4" />
+        <targetEnds>
+          <association Id="2af40f5f-3198-4680-b8d1-19522f8f3535" isDerived="false" sourceEndRoleName="ManufacturerSelectorController" targetEndRoleName="ManufacturerSelectorView" isLeaf="false" name="gets chosen Manufacturer from" isAbstract="false">
+            <classMoniker Id="d7204964-8c1f-4e85-ad7f-27c4cf437213" LastKnownName="ManufacturerSelectorView" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="65339f5a-baf3-4262-9871-777758513f99" name="ManufacturerSelectorController" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="60b60620-c91f-4c77-8d11-4caf6feca97d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5c558afd-739a-4778-a287-887b39667d1c" name="ManufacturerSelectorView" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9bd70182-ceb7-494c-a2b8-d89e6b1c57ce" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c80fbb56-c5b3-4da8-ad89-5fc241efbe7d" />
+          </association>
+          <association Id="4f5479b9-0943-42b2-bcf8-42dfc393aa2f" isDerived="false" sourceEndRoleName="ManufacturerSelectorController" targetEndRoleName="IRepository" isLeaf="false" name="gets list from" isAbstract="false">
+            <interfaceMoniker Id="65960c9f-c518-463c-9554-50f47071a3bd" LastKnownName="IRepository" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0ace4fc3-35ee-493a-bbe4-1f3b72a66d92" name="ManufacturerSelectorController" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b39b7da3-9e1e-4edc-b71d-25bd4dbb73de" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5f00ba41-24d8-41c6-9400-3e46a9be5945" name="IRepository" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="99e5f6c9-ae90-4c8b-b39d-1b5fbee292c2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="391dc6cb-bec4-4def-8100-32c70c0561b0" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="97a3b76c-55c4-439a-816a-9cc7b7220a7c" name="SelectManufacturer" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6a3346b4-298a-419a-84b5-6d8d00d6cbb8" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1e9ade25-6b9c-42bf-a3cf-be4943d16fa9" direction="Return" isUnique="false">
+                  <elementDefinition Id="062e9211-5c44-46c7-a2a1-b90eae28829b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="4bb47971-57ba-4bc7-b2a6-150daa707d8f" LastKnownName="Manufacturer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d7204964-8c1f-4e85-ad7f-27c4cf437213" name="ManufacturerSelectorView" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="13c4eab9-cf78-42b1-a3a9-59c37c73a76c" />
+        <ownedOperationsInternal>
+          <operation Id="01e00498-b123-425a-98c8-3df0bf1adeba" name="ListManufacturers" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ffb45565-b472-4fb9-a018-3bbaa0715523" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3c339e69-4373-4eac-a196-4f6728731e47" name="IList&lt;Manufacturer&gt;" direction="In" isUnique="false">
+                  <elementDefinition Id="ee6464dc-18c0-46d0-a7fb-11b1a573e985" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="195a8a77-e660-4b9a-a94f-fc602a5eeaa0" name="TEntity" isAbstract="false" isLeaf="false" cachedFullName="TEntity">
+        <elementDefinition Id="f6e9c437-b04d-4729-a972-2da8b1353f90" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="06586781-807d-4a4d-a2af-7459e029d39b" name="ComputerShop2.0Model">
+    <elementDefinition Id="6be23817-608d-4d8e-8e29-f2a9935e76bd" />
+    <profileInstances>
+      <packageHasProfileInstances Id="020010d9-0167-48c4-81be-46ee4fe3c4ef">
+        <profileInstance Id="004b533f-35d9-4485-8a73-6e42ecad99b7" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="db74f4d7-7108-4d11-9d02-2fb9b0985a75">
+        <profileInstance Id="56a14d09-1d1d-4dd6-8504-7ecb7d6ccb02" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

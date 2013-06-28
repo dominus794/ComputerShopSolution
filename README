@@ -1,0 +1,13 @@
+ComputerShop
+
+This is sample code for a little project I was assigned as part of a course I am studying.
+
+It is just a basic console application in C#, that is tied to a SQL Server Express database I created for it.
+
+It probably has a myriad of bugs and not much in terms of ui feedback, but I have attempted to learn and implement
+some complex design patterns such as Factories, DataMapper, Repository.
+
+It demonstrates layering an application into a Data, Domain, and Presentation Layers.
+
+I also used this project to learn a little bit of Raw ADO.NET, ADO.NET DataSets, and Linq2SQL, and have implemented
+DataMappers that map my domain objects to each of the 3 different database access code libraries.
