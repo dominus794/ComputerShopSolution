@@ -14,6 +14,9 @@ namespace ComputerShop.DataMappers.Linq2Sql
 {
 	public class Linq2SqlRamModuleDataMapper : Linq2SqlDataMapperBase<RamModule>
 	{
+        public Linq2SqlRamModuleDataMapper(string connectionString)
+            : base(connectionString) { }
+
 		public override void Insert(RamModule data)
 		{
 			//create a Linq2Sql ram module object

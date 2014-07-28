@@ -25,6 +25,9 @@ namespace ComputerShop.DataMappers.Linq2Sql
 {
 	public class Linq2SqlDesktopDataMapper : Linq2SqlDataMapperBase<Desktop>
 	{
+        public Linq2SqlDesktopDataMapper(string connectionString)
+            : base(connectionString) { }
+
 		public override void Insert(Desktop data)
 		{
 			try
@@ -373,6 +376,7 @@ namespace ComputerShop.DataMappers.Linq2Sql
 		{
 			IList<Desktop> desktops = new List<Desktop>();
 
+            /*
 			foreach (DesktopEntity desktop in context.Desktops)
 			{
 				try
@@ -476,6 +480,13 @@ namespace ComputerShop.DataMappers.Linq2Sql
 					throw;
 				}				
 			}
+             */
+
+            foreach (DesktopEntity d in context.Desktops)
+            {
+                desktops.Add(Select(d.DesktopID));
+            }
+
 			return desktops;
 		}
 	}

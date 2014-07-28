@@ -20,9 +20,12 @@ using LaptopEntity = ComputerShop.DAL.Linq2Sql.Laptop;
 using LaptopRamModuleEntity = ComputerShop.DAL.Linq2Sql.LaptopRamModule;
 
 namespace ComputerShop.DataMappers.Linq2Sql
-{
+{		
 	public class Linq2SqlLaptopDataMapper : Linq2SqlDataMapperBase<Laptop>
 	{
+        public Linq2SqlLaptopDataMapper(string connectionString)
+            : base(connectionString) { }
+
 		public override void Insert(Laptop data)
 		{
 			try

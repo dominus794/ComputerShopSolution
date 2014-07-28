@@ -14,6 +14,9 @@ namespace ComputerShop.DataMappers.Linq2Sql
 {
 	public class Linq2SqlHDDDataMapper : Linq2SqlDataMapperBase<HDD>
 	{
+        public Linq2SqlHDDDataMapper(string connectionString)
+            : base(connectionString) { }
+
 		public override void Insert(HDD data)
 		{
 			//create a Linq2Sql HDD object

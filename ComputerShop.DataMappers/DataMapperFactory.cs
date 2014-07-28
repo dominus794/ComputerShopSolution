@@ -11,13 +11,14 @@ using ComputerShop.DataMappers;
 using ComputerShop.DataMappers.SQL;
 using ComputerShop.DataMappers.SQLDataSet;
 using ComputerShop.DataMappers.Linq2Sql;
+using ComputerShop.DataMappers.EntityFramework;
 
 using ComputerShop.DAL;
 using ComputerShop.DAL.SQL;
 
 namespace ComputerShop.DataMappers
 {
-    public enum DataMapperType { SQL, SQLDataSet, Linq2Sql };
+    public enum DataMapperType { SQL, SQLDataSet, Linq2Sql, EntityFramework };
 
     public abstract class DataMapperFactory<TEntity> : IDataMapperFactory<TEntity>
     {
@@ -46,7 +47,10 @@ namespace ComputerShop.DataMappers
                     dataMapper = new SQLDataSetManufacturerDataMapper();
                     break;
                 case DataMapperType.Linq2Sql:
-                    dataMapper = new Linq2SqlManufacturerDataMapper();
+                    dataMapper = new Linq2SqlManufacturerDataMapper(ConfigurationManager.ConnectionStrings["ComputerShopConnectionString"].ConnectionString);
+                    break;
+                case DataMapperType.EntityFramework:
+                    dataMapper = new EntityFrameworkManufacturerDataMapper(ConfigurationManager.ConnectionStrings["ComputerShopConnectionString"].ConnectionString);
                     break;
             }
 
@@ -73,7 +77,10 @@ namespace ComputerShop.DataMappers
                     dataMapper = new SQLDataSetCPUDataMapper();
                     break;
                 case DataMapperType.Linq2Sql:
-                    dataMapper = new Linq2SqlCPUDataMapper();
+                    dataMapper = new Linq2SqlCPUDataMapper(ConfigurationManager.ConnectionStrings["ComputerShopConnectionString"].ConnectionString);
+                    break;
+                case DataMapperType.EntityFramework:
+                    dataMapper = new EntityFrameworkCPUDataMapper(ConfigurationManager.ConnectionStrings["ComputerShopConnectionString"].ConnectionString);
                     break;
             }
 
@@ -100,7 +107,10 @@ namespace ComputerShop.DataMappers
                     dataMapper = new SQLDataSetRamModuleDataMapper();
                     break;
                 case DataMapperType.Linq2Sql:
-                    dataMapper = new Linq2SqlRamModuleDataMapper();
+                    dataMapper = new Linq2SqlRamModuleDataMapper(ConfigurationManager.ConnectionStrings["ComputerShopConnectionString"].ConnectionString);
+                    break;
+                case DataMapperType.EntityFramework:
+                    dataMapper = new EntityFrameworkRamModuleDataMapper(ConfigurationManager.ConnectionStrings["ComputerShopConnectionString"].ConnectionString);
                     break;
             }
 
@@ -127,7 +137,10 @@ namespace ComputerShop.DataMappers
                     dataMapper = new SQLDataSetHDDDataMapper();
                     break;
                 case DataMapperType.Linq2Sql:
-                    dataMapper = new Linq2SqlHDDDataMapper();
+                    dataMapper = new Linq2SqlHDDDataMapper(ConfigurationManager.ConnectionStrings["ComputerShopConnectionString"].ConnectionString);
+                    break;
+                case DataMapperType.EntityFramework:
+                    dataMapper = new EntityFrameworkHDDDataMapper(ConfigurationManager.ConnectionStrings["ComputerShopConnectionString"].ConnectionString);
                     break;
             }
 
@@ -154,7 +167,10 @@ namespace ComputerShop.DataMappers
                     dataMapper = new SQLDataSetGPUDataMapper();
                     break;
                 case DataMapperType.Linq2Sql:
-                    dataMapper = new Linq2SqlGPUDataMapper();
+                    dataMapper = new Linq2SqlGPUDataMapper(ConfigurationManager.ConnectionStrings["ComputerShopConnectionString"].ConnectionString);
+                    break;
+                case DataMapperType.EntityFramework:
+                    dataMapper = new EntityFrameworkGPUDataMapper(ConfigurationManager.ConnectionStrings["ComputerShopConnectionString"].ConnectionString);
                     break;
             }
 
@@ -181,7 +197,10 @@ namespace ComputerShop.DataMappers
                     dataMapper = new SQLDataSetDesktopDataMapper();
                     break;
                 case DataMapperType.Linq2Sql:
-                    dataMapper = new Linq2SqlDesktopDataMapper();
+                    dataMapper = new Linq2SqlDesktopDataMapper(ConfigurationManager.ConnectionStrings["ComputerShopConnectionString"].ConnectionString);
+                    break;
+                case DataMapperType.EntityFramework:
+                    dataMapper = new EntityFrameworkDesktopDataMapper(ConfigurationManager.ConnectionStrings["ComputerShopConnectionString"].ConnectionString);
                     break;
             }
 
@@ -208,7 +227,10 @@ namespace ComputerShop.DataMappers
                     dataMapper = new SQLDataSetLaptopDataMapper();
                     break;
                 case DataMapperType.Linq2Sql:
-                    dataMapper = new Linq2SqlLaptopDataMapper();
+                    dataMapper = new Linq2SqlLaptopDataMapper(ConfigurationManager.ConnectionStrings["ComputerShopConnectionString"].ConnectionString);
+                    break;
+                case DataMapperType.EntityFramework:
+                    dataMapper = new Linq2SqlLaptopDataMapper(ConfigurationManager.ConnectionStrings["ComputerShopConnectionString"].ConnectionString);
                     break;
             }
 

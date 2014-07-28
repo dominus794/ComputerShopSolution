@@ -31,9 +31,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,6 +50,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EntityFramework\ComputerShopContext.cs" />
+    <Compile Include="EntityFramework\CPU.cs" />
+    <Compile Include="EntityFramework\Desktop.cs" />
+    <Compile Include="EntityFramework\DesktopGPU.cs" />
+    <Compile Include="EntityFramework\DesktopHDD.cs" />
+    <Compile Include="EntityFramework\DesktopRamModule.cs" />
+    <Compile Include="EntityFramework\GPU.cs" />
+    <Compile Include="EntityFramework\HDD.cs" />
+    <Compile Include="EntityFramework\Laptop.cs" />
+    <Compile Include="EntityFramework\LaptopRamModule.cs" />
+    <Compile Include="EntityFramework\Manufacturer.cs" />
+    <Compile Include="EntityFramework\Monitor.cs" />
+    <Compile Include="EntityFramework\RamModule.cs" />
     <Compile Include="SQL\DataRecords\CPUDataRecord.cs" />
     <Compile Include="SQL\TableDataGateways\CPUSQLTableDataGateway.cs" />
     <Compile Include="Linq2Sql\ComputerShopDataClasses.designer.cs">
@@ -89,6 +111,7 @@
       <LastGenOutput>ComputerShopDataClasses.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -113,6 +136,7 @@
       <DependentUpon>ComputerShopDataClasses.dbml</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -12,7 +12,7 @@ using ComputerShop.DataMappers;
 
 namespace ComputerShop.Repository
 {
-	public class Repository<TEntity> : IRepository<TEntity>
+	public class Repository<TEntity> : IRepository<TEntity> where TEntity : class, IEntity
 	{		
 		#region Fields
 		

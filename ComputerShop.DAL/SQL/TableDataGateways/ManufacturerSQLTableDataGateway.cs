@@ -19,30 +19,50 @@ namespace ComputerShop.DAL.SQL.TableDataGateways
 	public class ManufacturerSQLTableDataGateway : SQLTableDataGatewayBase
 	{
 		#region Constructor
+        /// <summary> 
+        ///     Constructs a ManufacturerSQLTableDataGateWay      
+        /// </summary>
+        /// <param name="connectionString">The connection string to connect to the database.</param>
 		public ManufacturerSQLTableDataGateway(string connectionString)
 			: base(connectionString)
 		{
 		}
 		#endregion
 
+        /// <summary>
+        ///     Selects an individual ManufacturerDataRecord from the database.
+        /// </summary>
+        /// <param name="manufacturer_id">The ID of the ManufacturerDataRecord to be returned</param>
+        /// <returns>A ManufacturerDataRecord from the database with the specified manufacturer_id</returns>
+        /// <exception cref="System.ArgumentNullException">Thrown if manufacturer_id is null</exception>
+        /// <exception cref="System.Data.SqlClient.SqlException">Thrown if the SQL Command fails</exception>"
 		public ManufacturerDataRecord Select(int manufacturer_id)
 		{
+            // check for null value
+            if (manufacturer_id == null)
+            {
+                throw new ArgumentNullException("manufacturer_id", "manufacturer_id cannot be null");                
+            }                
+
+            // create a new ManufacturerDataRecord to populate and return
 			ManufacturerDataRecord record = new ManufacturerDataRecord();
 
+            // the raw parameterized SQL statement
 			string selectSQL = "SELECT * from Manufacturers WHERE manufacturer_id = @manufacturer_id";
 
+            // create the sql command
 			using (SqlCommand cmd = new SqlCommand(selectSQL, this.connection))
 			{
 				try
 				{
-					//manufacturer_id
+					// manufacturer_id
 					SqlParameter manufacturerIDParam = new SqlParameter("@manufacturer_id", manufacturer_id);
 					cmd.Parameters.Add(manufacturerIDParam);
 				}
 				catch (Exception ex)
 				{
 					Debug.WriteLine(ex.Message);
-					throw ex;
+					throw;
 				}
 
 				try
@@ -59,7 +79,7 @@ namespace ComputerShop.DAL.SQL.TableDataGateways
 				catch (SqlException ex)
 				{
 					Debug.WriteLine(ex.Message);
-					throw ex;
+					throw;
 				}
 			}
 
@@ -82,7 +102,7 @@ namespace ComputerShop.DAL.SQL.TableDataGateways
 				catch (Exception ex)
 				{
 					Debug.WriteLine(ex.Message);
-					throw ex;
+					throw;
 				}
 
 				try
@@ -93,7 +113,7 @@ namespace ComputerShop.DAL.SQL.TableDataGateways
 				catch (SqlException ex)
 				{
 					Debug.WriteLine(ex.Message);
-					throw ex; //throw new DataMapperInsertException("Failed to insert new Manufacturer", ex);
+					throw; //throw new DataMapperInsertException("Failed to insert new Manufacturer", ex);
 				}
 			}
 		}
@@ -117,7 +137,7 @@ namespace ComputerShop.DAL.SQL.TableDataGateways
 				catch (Exception ex)
 				{
 					Debug.WriteLine(ex.Message);
-					throw ex;
+					throw;
 				}
 
 				try
@@ -127,7 +147,7 @@ namespace ComputerShop.DAL.SQL.TableDataGateways
 				catch (SqlException ex)
 				{
 					Debug.WriteLine(ex.Message);
-					throw ex; // throw new DataMapperUpdateException("Failed to update Manufacturer", ex);
+					throw; // throw new DataMapperUpdateException("Failed to update Manufacturer", ex);
 				}
 			}
 		}
@@ -147,7 +167,7 @@ namespace ComputerShop.DAL.SQL.TableDataGateways
 				catch (Exception ex)
 				{
 					Debug.WriteLine(ex.Message);
-					throw ex;
+					throw;
 				}
 
 				try
@@ -157,7 +177,7 @@ namespace ComputerShop.DAL.SQL.TableDataGateways
 				catch (SqlException ex)
 				{
 					Debug.WriteLine(ex.Message);
-					throw ex; //throw new DataMapperDeleteException("Failed to delete Manufacturer", ex);
+					throw; //throw new DataMapperDeleteException("Failed to delete Manufacturer", ex);
 				}
 			}
 		}

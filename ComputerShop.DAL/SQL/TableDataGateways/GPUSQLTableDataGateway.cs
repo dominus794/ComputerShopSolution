@@ -42,7 +42,7 @@ namespace ComputerShop.DAL.SQL.TableDataGateways
                 catch (Exception ex)
                 {
                     Debug.WriteLine(ex.Message);
-                    throw ex;
+                    throw;
                 }
 
                 try
@@ -67,7 +67,7 @@ namespace ComputerShop.DAL.SQL.TableDataGateways
                 catch (SqlException ex)
                 {
                     Debug.WriteLine(ex.Message);
-                    throw ex;
+                    throw;
                 }
 
                 return record;
@@ -132,7 +132,7 @@ namespace ComputerShop.DAL.SQL.TableDataGateways
                 catch (Exception ex)
                 {
                     Debug.WriteLine(ex.Message);
-                    throw ex;
+                    throw;
                 }
 
                 try
@@ -143,7 +143,7 @@ namespace ComputerShop.DAL.SQL.TableDataGateways
                 catch (SqlException ex)
                 {
                     Debug.WriteLine(ex.Message);
-                    throw ex;
+                    throw;
                 }
             }
         }
@@ -218,7 +218,7 @@ namespace ComputerShop.DAL.SQL.TableDataGateways
                 catch (Exception ex)
                 {
                     Debug.WriteLine(ex.Message);
-                    throw ex;
+                    throw;
                 }
 
                 try
@@ -229,7 +229,7 @@ namespace ComputerShop.DAL.SQL.TableDataGateways
                 catch (SqlException ex)
                 {
                     Debug.WriteLine(ex.Message);
-                    throw ex;
+                    throw;
                 }
             }
         }
@@ -249,7 +249,7 @@ namespace ComputerShop.DAL.SQL.TableDataGateways
                 catch (Exception ex)
                 {
                     Debug.WriteLine(ex.Message);
-                    throw ex;
+                    throw;
                 }
 
                 try
@@ -259,7 +259,7 @@ namespace ComputerShop.DAL.SQL.TableDataGateways
                 catch (SqlException ex)
                 {
                     Debug.WriteLine(ex.Message);
-                    throw ex;
+                    throw;
                 }
             }
         }

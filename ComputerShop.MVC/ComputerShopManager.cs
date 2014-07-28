@@ -10,6 +10,7 @@ using ComputerShop.Repository;
 using ComputerShop.DataMappers;
 using ComputerShop.DataMappers.SQLDataSet;
 using ComputerShop.DataMappers.Linq2Sql;
+using ComputerShop.DataMappers.EntityFramework;
 using ComputerShop.MVC.Controllers;
 
 namespace ComputerShop.MVC
