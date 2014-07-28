@@ -14,6 +14,9 @@ namespace ComputerShop.DataMappers.Linq2Sql
 {
 	public class Linq2SqlCPUDataMapper : Linq2SqlDataMapperBase<CPU>
 	{
+        public Linq2SqlCPUDataMapper(string connectionString)
+            : base(connectionString) { }
+
 		public override void Insert(CPU data)
 		{
 			//create a Linq2Sql cpu object
@@ -37,7 +40,7 @@ namespace ComputerShop.DataMappers.Linq2Sql
 		public override void Delete(CPU data)
 		{
 			//find the Linq2Sql CPU object
-			CPUEntity cpu = context.CPUs.Single(c => c.CpuID == data.ID);
+            CPUEntity cpu = (CPUEntity)context.GetCPUByID(data.ID); //context.CPUs.Single(c => c.CpuID == data.ID);
 			//delete it and submit the changes.
 			context.CPUs.DeleteOnSubmit(cpu);
 			context.SubmitChanges();
@@ -46,7 +49,8 @@ namespace ComputerShop.DataMappers.Linq2Sql
 		public override CPU Select(int id)
 		{
 			//find the Linq2Sql CPU object
-			CPUEntity cpu = context.CPUs.Single(c => c.CpuID == id);
+            CPUEntity cpu = (CPUEntity) context.GetCPUByID(id);//context.CPUs.Single(c => c.CpuID == id);
+
 			//create a domain CPU object and return it
 			return new CPU(cpu.CpuID,
 						   new Manufacturer(cpu.Manufacturer.ManufacturerID, cpu.Manufacturer.Name),

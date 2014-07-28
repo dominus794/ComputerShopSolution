@@ -14,6 +14,9 @@ namespace ComputerShop.DataMappers.Linq2Sql
 {
 	public class Linq2SqlGPUDataMapper : Linq2SqlDataMapperBase<GPU>
 	{
+        public Linq2SqlGPUDataMapper(string connectionString)
+            : base(connectionString) { }
+
 		public override void Insert(GPU data)
 		{
 			//create a Linq2Sql GPU object

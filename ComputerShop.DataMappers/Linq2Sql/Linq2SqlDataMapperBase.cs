@@ -11,9 +11,9 @@ namespace ComputerShop.DataMappers.Linq2Sql
 	{
 		protected ComputerShopDataClassesDataContext context;		
 
-		public Linq2SqlDataMapperBase()
+		public Linq2SqlDataMapperBase(string connectionString)
 		{
-			context = new ComputerShopDataClassesDataContext();
+            context = new ComputerShopDataClassesDataContext(connectionString);
 		}
 
 		public abstract override void Insert(TEntity data);

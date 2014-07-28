@@ -12,6 +12,9 @@ namespace ComputerShop.DataMappers.Linq2Sql
 {
 	public class Linq2SqlManufacturerDataMapper : Linq2SqlDataMapperBase<Manufacturer>
 	{
+        public Linq2SqlManufacturerDataMapper(string connectionString)
+            : base(connectionString) { }
+
 		public override void Insert(Manufacturer data)
 		{
 			//create a Linq2Sql manufacturer object

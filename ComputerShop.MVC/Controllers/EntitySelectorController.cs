@@ -12,7 +12,7 @@ using ComputerShop.MVC.Views;
 
 namespace ComputerShop.MVC.Controllers
 {
-	public class EntitySelectorController<TEntity>
+	public class EntitySelectorController<TEntity> where TEntity : class, IEntity
 	{
 		private IRepository<TEntity> entityRepository;
 		private EntitySelectorView<TEntity> view;

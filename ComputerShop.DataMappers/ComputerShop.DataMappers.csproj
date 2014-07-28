@@ -31,7 +31,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
@@ -45,6 +52,13 @@
   <ItemGroup>
     <Compile Include="DataMapper.cs" />
     <Compile Include="DataMapperFactory.cs" />
+    <Compile Include="EntityFramework\EntityFrameworkCPUDataMapper.cs" />
+    <Compile Include="EntityFramework\EntityFrameworkDataMapperBase.cs" />
+    <Compile Include="EntityFramework\EntityFrameworkDesktopDataMapper.cs" />
+    <Compile Include="EntityFramework\EntityFrameworkGPUDataMapper.cs" />
+    <Compile Include="EntityFramework\EntityFrameworkHDDDataMapper.cs" />
+    <Compile Include="EntityFramework\EntityFrameworkManufacturerDataMapper.cs" />
+    <Compile Include="EntityFramework\EntityFrameworkRamModuleDataMapper.cs" />
     <Compile Include="IDataMapper.cs" />
     <Compile Include="IDataMapperFactory.cs" />
     <Compile Include="Linq2Sql\Linq2SqlCPUDataMapper.cs" />
@@ -96,6 +110,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="ComputerShop.DataMappers.classDiagram.cd" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

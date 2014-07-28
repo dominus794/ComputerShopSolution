@@ -17,8 +17,9 @@ namespace ComputerShop.DAL.SQL.TableDataGateways
 	{
 		#region Fields
 
+        private bool disposed;
 		protected string connectionString;
-		protected SqlConnection connection;
+		protected SqlConnection connection;        
 
 		#endregion
 
@@ -26,6 +27,7 @@ namespace ComputerShop.DAL.SQL.TableDataGateways
 
 		public SQLTableDataGatewayBase(string connectionString)
 		{
+            this.disposed = false;
 			this.connectionString = connectionString;
 			this.connection = new SqlConnection(this.connectionString);
 			OpenConnection();
@@ -33,9 +35,31 @@ namespace ComputerShop.DAL.SQL.TableDataGateways
 
 		#endregion
 
-		#region Connection Management
+        #region Destructor
 
-		/// <summary>
+        ~SQLTableDataGatewayBase()
+        {
+            Dispose(false);            
+        }
+
+        private void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                    CloseConnection();
+                }
+            }
+
+            disposed = true;
+        }
+
+        #endregion
+
+        #region Connection Management
+
+        /// <summary>
 		/// Opens an SQL Server connection.
 		/// </summary>
 		/// <param name="connectionString">Connection String to the database.</param>
@@ -49,27 +73,27 @@ namespace ComputerShop.DAL.SQL.TableDataGateways
 			catch (SqlException ex)
 			{
 				Debug.WriteLine(ex.Message);
-				throw ex;
+				throw;
 			}
 			catch (ArgumentException ex)
 			{
 				Debug.WriteLine(ex.Message);
-				throw ex;
+				throw;
 			}
 		}
 
 		protected void CloseConnection()
-		{
+		{            
 			try
-			{
-				if (connection.State == ConnectionState.Open)
-					connection.Close();
+			{ 
+                if (connection.State == ConnectionState.Open)
+                    connection.Close();                    
 			}
 			catch (SqlException ex)
 			{
 				Debug.WriteLine(ex.Message);
-				throw ex;
-			}
+				throw;
+			}            
 		}
 
 		#endregion
@@ -78,7 +102,8 @@ namespace ComputerShop.DAL.SQL.TableDataGateways
 
 		public void Dispose()
 		{
-			CloseConnection();
+            Dispose(true);
+            GC.SuppressFinalize(this);
 		}
 
 		#endregion

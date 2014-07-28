@@ -8,7 +8,7 @@ using ComputerShop.Interfaces;
 
 namespace ComputerShop.Repository
 {
-	public interface IRepository<TEntity>
+	public interface IRepository<TEntity> where TEntity : class, IEntity
 	{
 		// gets the entity by its id.
 		TEntity GetByID(int id);

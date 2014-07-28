@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="JustITComputerShop" Class="ComputerShopDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DOMINUS-PC\SQLEXPRESS;Initial Catalog=JustITComputerShop;Integrated Security=True" SettingsObjectName="ComputerShop.DAL.Properties.Settings" SettingsPropertyName="JustITComputerShopConnectionString1" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ComputerShop" Class="ComputerShopDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=DOMINUS-PC\SQLEXPRESS;Initial Catalog=ComputerShop;Integrated Security=True" Provider="System.Data.SqlClient" />
   <Table Name="dbo.CPUs" Member="CPUs">
-    <Type Name="CPU">
+    <Type Name="CPU" Id="ID1">
       <Column Name="cpu_id" Member="CpuID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="manufacturer_id" Member="ManufacturerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="model" Member="Model" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
@@ -144,4 +144,8 @@
       <Association Name="Manufacturer_Laptop" Member="Laptops" ThisKey="ManufacturerID" OtherKey="ManufacturerID" Type="Laptop" />
     </Type>
   </Table>
+  <Function Name="dbo.GetCPUByID" Method="GetCPUByID">
+    <Parameter Name="cpu_id" Type="System.Int32" DbType="Int" />
+    <ElementType IdRef="ID1" />
+  </Function>
 </Database>
