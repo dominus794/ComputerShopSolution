@@ -9,16 +9,17 @@ namespace ComputerShop.DAL.EntityFramework
     public partial class LaptopRamModule
     {
         [Key]
-        [Column(Order = 0)]
+        [Column("laptop_id", Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int laptop_id { get; set; }
+        public int LaptopId { get; set; }
 
         [Key]
-        [Column(Order = 1)]
+        [Column("ram_id", Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int ram_id { get; set; }
+        public int RamId { get; set; }
 
-        public int quantity { get; set; }
+        [Column("quantity")]
+        public int Quantity { get; set; }
 
         public virtual Laptop Laptop { get; set; }
 

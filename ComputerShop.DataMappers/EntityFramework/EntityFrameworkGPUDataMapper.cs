@@ -27,18 +27,18 @@ namespace ComputerShop.DataMappers.EntityFramework
             //create a EF GPU object
             GPUEntity gpu = new GPUEntity();
             //get the EF manufacturer object, using the domain manufacturer objects id
-            ManufacturerEntity manufacturer = context.Manufacturers.Single(m => m.manufacturer_id == data.Manufacturer.ID);
+            ManufacturerEntity manufacturer = context.Manufacturers.Single(m => m.ManufacturerId == data.Manufacturer.ID);
 
-            gpu.manufacturer_id = data.Manufacturer.ID;
+            gpu.ManufacturerId = data.Manufacturer.ID;
             gpu.Manufacturer = manufacturer;
             gpu.model = data.Model;
-            gpu.price = data.Price;
-            gpu.gpu_model = data.GpuModel;
-            gpu.gpu_clock_speed = (short)data.GpuClockSpeed;
-            gpu.vram_size = (short)data.VRamSize;
-            gpu.vram_clock_speed = (short)data.VRamClockSpeed;
-            gpu.vram_type = data.GddrVersion.ToString();
-            gpu.gpu_type = data.GpuType.ToString();
+            gpu.Price = data.Price;
+            gpu.GpuModel = data.GpuModel;
+            gpu.GpuClockSpeed = (short)data.GpuClockSpeed;
+            gpu.VramSize = (short)data.VRamSize;
+            gpu.VramClockSpeed = (short)data.VRamClockSpeed;
+            gpu.VramType = data.GddrVersion.ToString();
+            gpu.GpuType = data.GpuType.ToString();
 
             //insert into database and submit changes.
             context.GPUs.Add(gpu);
@@ -48,7 +48,7 @@ namespace ComputerShop.DataMappers.EntityFramework
         public override void Delete(GPU data)
         {
             //find the EF GPU object
-            GPUEntity gpu = context.GPUs.Single(g => g.gpu_id == data.ID);
+            GPUEntity gpu = context.GPUs.Single(g => g.GpuId == data.ID);
             //delete it and submit changes
             context.GPUs.Remove(gpu);
             context.SaveChanges();
@@ -57,39 +57,39 @@ namespace ComputerShop.DataMappers.EntityFramework
         public override GPU Select(int id)
         {
             //find the EF GPU object
-            GPUEntity gpu = context.GPUs.Single(g => g.gpu_id == id);
+            GPUEntity gpu = context.GPUs.Single(g => g.GpuId == id);
             //create a new domain GPU object and return it.
-            return new GPU(gpu.gpu_id,
-                           new Manufacturer(gpu.Manufacturer.manufacturer_id, gpu.Manufacturer.name),
+            return new GPU(gpu.GpuId,
+                           new Manufacturer(gpu.Manufacturer.ManufacturerId, gpu.Manufacturer.Name),
                            gpu.model,
-                           gpu.price,
-                           gpu.gpu_model,
-                           (ushort)gpu.gpu_clock_speed,
-                           (ushort)gpu.vram_size,
-                           (ushort)gpu.vram_clock_speed,
-                           (GDDRVersion)Enum.Parse(typeof(GDDRVersion), gpu.vram_type),
-                           (GPUType)Enum.Parse(typeof(GPUType), gpu.gpu_type));		
+                           gpu.Price,
+                           gpu.GpuModel,
+                           (ushort)gpu.GpuClockSpeed,
+                           (ushort)gpu.VramSize,
+                           (ushort)gpu.VramClockSpeed,
+                           (GDDRVersion)Enum.Parse(typeof(GDDRVersion), gpu.VramType),
+                           (GPUType)Enum.Parse(typeof(GPUType), gpu.GpuType));		
         }
 
         public override void Update(GPU data)
         {
             // find the EF GPU object
-            GPUEntity gpu = context.GPUs.Single(g => g.gpu_id == data.ID);
+            GPUEntity gpu = context.GPUs.Single(g => g.GpuId == data.ID);
 
             //get the EF manufacturer object, using the domain manufacturer object's id.
-            ManufacturerEntity manufacturer = context.Manufacturers.Single(m => m.manufacturer_id == data.Manufacturer.ID);
+            ManufacturerEntity manufacturer = context.Manufacturers.Single(m => m.ManufacturerId == data.Manufacturer.ID);
 
             // update
-            gpu.manufacturer_id = data.Manufacturer.ID;
+            gpu.ManufacturerId = data.Manufacturer.ID;
             gpu.Manufacturer = manufacturer;
             gpu.model = data.Model;
-            gpu.price = data.Price;
-            gpu.gpu_model = data.GpuModel;
-            gpu.gpu_clock_speed = (short)data.GpuClockSpeed;
-            gpu.vram_size = (short)data.VRamSize;
-            gpu.vram_clock_speed = (short)data.VRamClockSpeed;
-            gpu.vram_type = data.GddrVersion.ToString();
-            gpu.gpu_type = data.GpuType.ToString();
+            gpu.Price = data.Price;
+            gpu.GpuModel = data.GpuModel;
+            gpu.GpuClockSpeed = (short)data.GpuClockSpeed;
+            gpu.VramSize = (short)data.VRamSize;
+            gpu.VramClockSpeed = (short)data.VRamClockSpeed;
+            gpu.VramType = data.GddrVersion.ToString();
+            gpu.GpuType = data.GpuType.ToString();
 
             // save 
             context.SaveChanges();
@@ -122,20 +122,20 @@ namespace ComputerShop.DataMappers.EntityFramework
             {
                 var gpu = new GPU
                                {
-                                   ID = g.gpu_id,
+                                   ID = g.GpuId,
                                    Manufacturer = new Manufacturer
                                    {
-                                       ID = g.Manufacturer.manufacturer_id,
-                                       Name = g.Manufacturer.name
+                                       ID = g.Manufacturer.ManufacturerId,
+                                       Name = g.Manufacturer.Name
                                    },
                                    Model = g.model,
-                                   Price = g.price,
-                                   GpuModel = g.gpu_model,
-                                   GpuClockSpeed = (ushort)g.gpu_clock_speed,
-                                   VRamSize = (ushort)g.vram_size,
-                                   VRamClockSpeed = (ushort)g.vram_clock_speed,
-                                   GddrVersion = (GDDRVersion)Enum.Parse(typeof(GDDRVersion), g.vram_type),
-                                   GpuType = (GPUType)Enum.Parse(typeof(GPUType), g.gpu_type)
+                                   Price = g.Price,
+                                   GpuModel = g.GpuModel,
+                                   GpuClockSpeed = (ushort)g.GpuClockSpeed,
+                                   VRamSize = (ushort)g.VramSize,
+                                   VRamClockSpeed = (ushort)g.VramClockSpeed,
+                                   GddrVersion = (GDDRVersion)Enum.Parse(typeof(GDDRVersion), g.VramType),
+                                   GpuType = (GPUType)Enum.Parse(typeof(GPUType), g.GpuType)
                                };
 
                 gpus.Add(gpu);

@@ -15,28 +15,35 @@ namespace ComputerShop.DAL.EntityFramework
         }
 
         [Key]
-        public int ram_id { get; set; }
+        [Column("ram_id")]
+        public int RamId { get; set; }
 
-        public int manufacturer_id { get; set; }
+        [Column("manufacturer_id")]
+        public int ManufacturerId { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string model { get; set; }
+        [Column("model")]
+        public string Model { get; set; }
 
-        [Column(TypeName = "smallmoney")]
-        public decimal price { get; set; }
+        [Column("price", TypeName = "smallmoney")]
+        public decimal Price { get; set; }
 
-        public short bus_speed { get; set; }
+        [Column("bus_speed")]
+        public short BusSpeed { get; set; }
 
-        public short size { get; set; }
+        [Column("size")]
+        public short Size { get; set; }
 
         [Required]
         [StringLength(4)]
-        public string ddr_version { get; set; }
+        [Column("ddr_version")]
+        public string DDRVersion { get; set; }
 
         [Required]
         [StringLength(10)]
-        public string ram_form_factor { get; set; }
+        [Column("ram_form_factor")]
+        public string RamFormFactor { get; set; }
 
         public virtual ICollection<DesktopRamModule> DesktopRamModules { get; set; }
 

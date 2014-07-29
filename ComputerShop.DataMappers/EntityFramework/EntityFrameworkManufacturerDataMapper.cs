@@ -22,7 +22,7 @@ namespace ComputerShop.DataMappers.EntityFramework
         {
             // create an EF Manufacturer object
             ManufacturerEntity manufacturer = new ManufacturerEntity();
-            manufacturer.name = data.Name;
+            manufacturer.Name = data.Name;
             // insert into database and save
             context.Manufacturers.Add(manufacturer);
             context.SaveChanges();
@@ -31,7 +31,7 @@ namespace ComputerShop.DataMappers.EntityFramework
         public override void Delete(Manufacturer data)
         {
             // find the EF Manufacturer object
-            ManufacturerEntity manufacturer = context.Manufacturers.Single(i => i.manufacturer_id == data.ID);
+            ManufacturerEntity manufacturer = context.Manufacturers.Single(i => i.ManufacturerId == data.ID);
             // remove it and save the change.
             context.Manufacturers.Remove(manufacturer);
             context.SaveChanges();
@@ -40,16 +40,16 @@ namespace ComputerShop.DataMappers.EntityFramework
         public override Manufacturer Select(int id)
         {
             // find the EF Manufacturer object
-            ManufacturerEntity manufacturer = context.Manufacturers.Single(i => i.manufacturer_id == id);
-            return new Manufacturer(manufacturer.manufacturer_id, manufacturer.name);
+            ManufacturerEntity manufacturer = context.Manufacturers.Single(i => i.ManufacturerId == id);
+            return new Manufacturer(manufacturer.ManufacturerId, manufacturer.Name);
         }
 
         public override void Update(Manufacturer data)
         {
             // find the EF Manufacturer object
-            ManufacturerEntity manufacturer = context.Manufacturers.Single(i => i.manufacturer_id == data.ID);
+            ManufacturerEntity manufacturer = context.Manufacturers.Single(i => i.ManufacturerId == data.ID);
             // update it and save the change
-            manufacturer.name = data.Name;
+            manufacturer.Name = data.Name;
             context.SaveChanges();
         }
 
@@ -68,8 +68,8 @@ namespace ComputerShop.DataMappers.EntityFramework
             {
                 var manufacturer = new Manufacturer
                                         {
-                                            ID = m.manufacturer_id,
-                                            Name = m.name
+                                            ID = m.ManufacturerId,
+                                            Name = m.Name
                                         };
 
                 manufacturers.Add(manufacturer);

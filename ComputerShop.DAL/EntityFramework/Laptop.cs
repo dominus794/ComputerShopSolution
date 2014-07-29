@@ -14,28 +14,37 @@ namespace ComputerShop.DAL.EntityFramework
         }
 
         [Key]
-        public int laptop_id { get; set; }
+        [Column("laptop_id")]
+        public int LaptopId { get; set; }
 
-        public int manufacturer_id { get; set; }
+        [Column("manufacturer_id")]
+        public int ManufacturerId { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string model { get; set; }
+        [Column("model")]
+        public string Model { get; set; }
 
-        [Column(TypeName = "smallmoney")]
-        public decimal price { get; set; }
+        [Column("price", TypeName = "smallmoney")]
+        public decimal Price { get; set; }
 
-        public byte weight { get; set; }
+        [Column("weight")]
+        public byte Weight { get; set; }
 
-        public byte battery_life { get; set; }
+        [Column("battery_life")]
+        public byte BatteryLife { get; set; }
 
-        public decimal display_size { get; set; }
+        [Column("display_size")]
+        public decimal DisplaySize { get; set; }
 
-        public int cpu_id { get; set; }
+        [Column("cpu_id")]
+        public int CpuId { get; set; }
 
-        public int hdd_id { get; set; }
+        [Column("hdd_id")]
+        public int HddId { get; set; }
 
-        public int gpu_id { get; set; }
+        [Column("gpu_id")]
+        public int GpuId { get; set; }
 
         public virtual CPU CPU { get; set; }
 

@@ -20,11 +20,13 @@ namespace ComputerShop.DAL.EntityFramework
         }
 
         [Key]
-        public int manufacturer_id { get; set; }
+        [Column("manufacturer_id")]
+        public int ManufacturerId { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string name { get; set; }
+        [Column("name")]
+        public string Name { get; set; }
 
         public virtual ICollection<CPU> CPUs { get; set; }
 

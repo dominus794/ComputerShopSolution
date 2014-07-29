@@ -26,16 +26,16 @@ namespace ComputerShop.DataMappers.EntityFramework
             //create a EF ram module object
             RamModuleEntity ramModule = new RamModuleEntity();
             //get the EF manufacturer object, using the domain manufacturer objects id
-            ManufacturerEntity manufacturer = context.Manufacturers.Single(m => m.manufacturer_id == data.Manufacturer.ID);
+            ManufacturerEntity manufacturer = context.Manufacturers.Single(m => m.ManufacturerId == data.Manufacturer.ID);
 
-            ramModule.manufacturer_id = data.Manufacturer.ID;
+            ramModule.ManufacturerId = data.Manufacturer.ID;
             ramModule.Manufacturer = manufacturer;
-            ramModule.model = data.Model;
-            ramModule.price = data.Price;
-            ramModule.bus_speed = (short)data.ClockSpeed;
-            ramModule.ddr_version = data.DDRVersion.ToString();
-            ramModule.ram_form_factor = data.RamFormFactor.ToString();
-            ramModule.size = (short)data.Size;
+            ramModule.Model = data.Model;
+            ramModule.Price = data.Price;
+            ramModule.BusSpeed = (short)data.ClockSpeed;
+            ramModule.DDRVersion = data.DDRVersion.ToString();
+            ramModule.RamFormFactor = data.RamFormFactor.ToString();
+            ramModule.Size = (short)data.Size;
 
             //insert into database and save.
             context.RamModules.Add(ramModule);
@@ -45,7 +45,7 @@ namespace ComputerShop.DataMappers.EntityFramework
         public override void Delete(RamModule data)
         {
             //find the EF RamModule object.
-            RamModuleEntity ramModule = context.RamModules.Single(r => r.ram_id == data.ID);
+            RamModuleEntity ramModule = context.RamModules.Single(r => r.RamId == data.ID);
             //delete it and submit the changes
             context.RamModules.Remove(ramModule);
             context.SaveChanges();
@@ -54,34 +54,34 @@ namespace ComputerShop.DataMappers.EntityFramework
         public override RamModule Select(int id)
         {
             //find the EF RamModule object.
-            RamModuleEntity ramModule = context.RamModules.Single(r => r.ram_id == id);
+            RamModuleEntity ramModule = context.RamModules.Single(r => r.RamId == id);
             //create a domain RamModule object and return it.
-            return new RamModule(ramModule.ram_id,
-                                 new Manufacturer(ramModule.Manufacturer.manufacturer_id, ramModule.Manufacturer.name),
-                                 ramModule.model,
-                                 ramModule.price,
-                                 (ushort)ramModule.bus_speed,
-                                 (DDRVersion)Enum.Parse(typeof(DDRVersion), ramModule.ddr_version),
-                                 (RAMFormFactor)Enum.Parse(typeof(RAMFormFactor), ramModule.ram_form_factor),
-                                 (ushort)ramModule.size);
+            return new RamModule(ramModule.RamId,
+                                 new Manufacturer(ramModule.Manufacturer.ManufacturerId, ramModule.Manufacturer.Name),
+                                 ramModule.Model,
+                                 ramModule.Price,
+                                 (ushort)ramModule.BusSpeed,
+                                 (DDRVersion)Enum.Parse(typeof(DDRVersion), ramModule.DDRVersion),
+                                 (RAMFormFactor)Enum.Parse(typeof(RAMFormFactor), ramModule.RamFormFactor),
+                                 (ushort)ramModule.Size);
         }
 
         public override void Update(RamModule data)
         {
             //find a EF ram module object
-            RamModuleEntity ramModule = context.RamModules.Single(r => r.ram_id == data.ID);
+            RamModuleEntity ramModule = context.RamModules.Single(r => r.RamId == data.ID);
             //get the EF manufacturer object, using the domain manufacturer objects id
-            ManufacturerEntity manufacturer = context.Manufacturers.Single(m => m.manufacturer_id == data.Manufacturer.ID);
+            ManufacturerEntity manufacturer = context.Manufacturers.Single(m => m.ManufacturerId == data.Manufacturer.ID);
 
             // update
-            ramModule.manufacturer_id = data.Manufacturer.ID;
+            ramModule.ManufacturerId = data.Manufacturer.ID;
             ramModule.Manufacturer = manufacturer;
-            ramModule.model = data.Model;
-            ramModule.price = data.Price;
-            ramModule.bus_speed = (short)data.ClockSpeed;
-            ramModule.ddr_version = data.DDRVersion.ToString();
-            ramModule.ram_form_factor = data.RamFormFactor.ToString();
-            ramModule.size = (short)data.Size;
+            ramModule.Model = data.Model;
+            ramModule.Price = data.Price;
+            ramModule.BusSpeed = (short)data.ClockSpeed;
+            ramModule.DDRVersion = data.DDRVersion.ToString();
+            ramModule.RamFormFactor = data.RamFormFactor.ToString();
+            ramModule.Size = (short)data.Size;
 
             // save            
             context.SaveChanges();
@@ -112,18 +112,18 @@ namespace ComputerShop.DataMappers.EntityFramework
             {
                 var ramModule = new RamModule
                                         {
-                                            ID = r.ram_id,
+                                            ID = r.RamId,
                                             Manufacturer = new Manufacturer
                                             {
-                                                ID = r.Manufacturer.manufacturer_id,
-                                                Name = r.Manufacturer.name
+                                                ID = r.Manufacturer.ManufacturerId,
+                                                Name = r.Manufacturer.Name
                                             },
-                                            Model = r.model,
-                                            Price = r.price,
-                                            ClockSpeed = (ushort)r.bus_speed,
-                                            DDRVersion = (DDRVersion)Enum.Parse(typeof(DDRVersion), r.ddr_version),
-                                            RamFormFactor = (RAMFormFactor)Enum.Parse(typeof(RAMFormFactor), r.ram_form_factor),
-                                            Size = (ushort)r.size
+                                            Model = r.Model,
+                                            Price = r.Price,
+                                            ClockSpeed = (ushort)r.BusSpeed,
+                                            DDRVersion = (DDRVersion)Enum.Parse(typeof(DDRVersion), r.DDRVersion),
+                                            RamFormFactor = (RAMFormFactor)Enum.Parse(typeof(RAMFormFactor), r.RamFormFactor),
+                                            Size = (ushort)r.Size
                                         };
 
                 modules.Add(ramModule);

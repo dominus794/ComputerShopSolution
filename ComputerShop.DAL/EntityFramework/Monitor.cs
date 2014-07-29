@@ -14,18 +14,22 @@ namespace ComputerShop.DAL.EntityFramework
         }
 
         [Key]
-        public int monitor_id { get; set; }
+        [Column("monitor_id")]
+        public int MonitorId { get; set; }
 
-        public int manufacturer_id { get; set; }
+        [Column("manufacturer_id")]
+        public int ManufacturerId { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string model { get; set; }
+        [Column("model")]
+        public string Model { get; set; }
 
-        [Column(TypeName = "smallmoney")]
-        public decimal price { get; set; }
+        [Column("price", TypeName = "smallmoney")]
+        public decimal Price { get; set; }
 
-        public byte size { get; set; }
+        [Column("size")]
+        public byte Size { get; set; }
 
         public virtual ICollection<Desktop> Desktops { get; set; }
 

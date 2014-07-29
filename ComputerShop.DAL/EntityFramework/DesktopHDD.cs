@@ -9,16 +9,17 @@ namespace ComputerShop.DAL.EntityFramework
     public partial class DesktopHDD
     {
         [Key]
-        [Column(Order = 0)]
+        [Column("desktop_id", Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int desktop_id { get; set; }
+        public int DesktopId { get; set; }
 
         [Key]
-        [Column(Order = 1)]
+        [Column("hdd_id", Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int hdd_id { get; set; }
+        public int HddId { get; set; }
 
-        public int quantity { get; set; }
+        [Column("quantity")]
+        public int Quantity { get; set; }
 
         public virtual Desktop Desktop { get; set; }
 

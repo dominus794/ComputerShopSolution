@@ -16,20 +16,25 @@ namespace ComputerShop.DAL.EntityFramework
         }
 
         [Key]
-        public int desktop_id { get; set; }
+        [Column("desktop_id")]
+        public int DesktopId { get; set; }
 
-        public int? manufacturer_id { get; set; }
+        [Column("manufacturer_id")]
+        public int? ManufacturerId { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string model { get; set; }
+        [Column("model")]
+        public string Model { get; set; }
 
-        [Column(TypeName = "smallmoney")]
-        public decimal price { get; set; }
+        [Column("Price", TypeName = "smallmoney")]
+        public decimal Price { get; set; }
 
-        public int cpu_id { get; set; }
+        [Column("cpu_id")]
+        public int CpuId { get; set; }
 
-        public int? monitor_id { get; set; }
+        [Column("monitor_id")]
+        public int? MonitorId { get; set; }
 
         public virtual CPU CPU { get; set; }
 

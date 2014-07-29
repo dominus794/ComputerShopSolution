@@ -26,17 +26,17 @@ namespace ComputerShop.DataMappers.EntityFramework
             // create the EF HDD object
             HDDEntity hdd = new HDDEntity();
             // get the EF manufacturer object
-            ManufacturerEntity manufacturer = context.Manufacturers.Single(m => m.manufacturer_id == data.Manufacturer.ID);
+            ManufacturerEntity manufacturer = context.Manufacturers.Single(m => m.ManufacturerId == data.Manufacturer.ID);
 
-            hdd.manufacturer_id = data.Manufacturer.ID;
+            hdd.ManufacturerId = data.Manufacturer.ID;
             hdd.Manufacturer = manufacturer;
-            hdd.model = data.Model;
-            hdd.price = data.Price;
-            hdd.capacity = (short)data.Capacity;
-            hdd.hdd_form_factor = data.HddFormFactor.ToString();
-            hdd.hdd_interface = data.HddInterfaceType.ToString();
-            hdd.hdd_type = data.HddType.ToString();
-            hdd.speed = (short)data.Speed;
+            hdd.Model = data.Model;
+            hdd.Price = data.Price;
+            hdd.Capacity = (short)data.Capacity;
+            hdd.HddFormFactor = data.HddFormFactor.ToString();
+            hdd.HddInterface = data.HddInterfaceType.ToString();
+            hdd.HddType = data.HddType.ToString();
+            hdd.Speed = (short)data.Speed;
 
             // insert into database and save changes
             context.HDDs.Add(hdd);
@@ -46,7 +46,7 @@ namespace ComputerShop.DataMappers.EntityFramework
         public override void Delete(HDD data)
         {
             // find the EF HDD object
-            HDDEntity hdd = context.HDDs.Single(h => h.hdd_id == data.ID);
+            HDDEntity hdd = context.HDDs.Single(h => h.HddId == data.ID);
             // delete it and save changes
             context.HDDs.Remove(hdd);
             context.SaveChanges();
@@ -55,36 +55,36 @@ namespace ComputerShop.DataMappers.EntityFramework
         public override HDD Select(int id)
         {
             //find the EF HDD object.
-            HDDEntity hdd = context.HDDs.Single(h => h.hdd_id == id);
+            HDDEntity hdd = context.HDDs.Single(h => h.HddId == id);
             //create a new domain HDD object and return it.
-            return new HDD(hdd.hdd_id,
-                           new Manufacturer(hdd.Manufacturer.manufacturer_id, hdd.Manufacturer.name),
-                           hdd.model,
-                           hdd.price,
-                           (ushort)hdd.capacity,
-                           (HDDFormFactor)Enum.Parse(typeof(HDDFormFactor), hdd.hdd_form_factor),
-                           (HDDInterfaceType)Enum.Parse(typeof(HDDInterfaceType), hdd.hdd_interface),
-                           (HDDType)Enum.Parse(typeof(HDDType), hdd.hdd_type),
-                           (ushort)hdd.speed);
+            return new HDD(hdd.HddId,
+                           new Manufacturer(hdd.Manufacturer.ManufacturerId, hdd.Manufacturer.Name),
+                           hdd.Model,
+                           hdd.Price,
+                           (ushort)hdd.Capacity,
+                           (HDDFormFactor)Enum.Parse(typeof(HDDFormFactor), hdd.HddFormFactor),
+                           (HDDInterfaceType)Enum.Parse(typeof(HDDInterfaceType), hdd.HddInterface),
+                           (HDDType)Enum.Parse(typeof(HDDType), hdd.HddType),
+                           (ushort)hdd.Speed);
         }
 
         public override void Update(HDD data)
         {
             // find the EF HDD object
-            HDDEntity hdd = context.HDDs.Single(h => h.hdd_id == data.ID);
+            HDDEntity hdd = context.HDDs.Single(h => h.HddId == data.ID);
             // get the EF manufacturer object
-            ManufacturerEntity manufacturer = context.Manufacturers.Single(m => m.manufacturer_id == data.Manufacturer.ID);
+            ManufacturerEntity manufacturer = context.Manufacturers.Single(m => m.ManufacturerId == data.Manufacturer.ID);
 
             // update
-            hdd.manufacturer_id = data.Manufacturer.ID;
+            hdd.ManufacturerId = data.Manufacturer.ID;
             hdd.Manufacturer = manufacturer;
-            hdd.model = data.Model;
-            hdd.price = data.Price;
-            hdd.capacity = (short)data.Capacity;
-            hdd.hdd_form_factor = data.HddFormFactor.ToString();
-            hdd.hdd_interface = data.HddInterfaceType.ToString();
-            hdd.hdd_type = data.HddType.ToString();
-            hdd.speed = (short)data.Speed;
+            hdd.Model = data.Model;
+            hdd.Price = data.Price;
+            hdd.Capacity = (short)data.Capacity;
+            hdd.HddFormFactor = data.HddFormFactor.ToString();
+            hdd.HddInterface = data.HddInterfaceType.ToString();
+            hdd.HddType = data.HddType.ToString();
+            hdd.Speed = (short)data.Speed;
 
             // save
             context.SaveChanges();   
@@ -116,19 +116,19 @@ namespace ComputerShop.DataMappers.EntityFramework
             {
                 var hdd = new HDD
                                {
-                                   ID = h.hdd_id,
+                                   ID = h.HddId,
                                    Manufacturer = new Manufacturer
                                    {
-                                       ID = h.Manufacturer.manufacturer_id,
-                                       Name = h.Manufacturer.name
+                                       ID = h.Manufacturer.ManufacturerId,
+                                       Name = h.Manufacturer.Name
                                    },
-                                   Model = h.model,
-                                   Price = h.price,
-                                   Capacity = (ushort)h.capacity,
-                                   HddFormFactor = (HDDFormFactor)Enum.Parse(typeof(HDDFormFactor), h.hdd_form_factor),
-                                   HddInterfaceType = (HDDInterfaceType)Enum.Parse(typeof(HDDInterfaceType), h.hdd_interface),
-                                   HddType = (HDDType)Enum.Parse(typeof(HDDType), h.hdd_type),
-                                   Speed = (ushort)h.speed
+                                   Model = h.Model,
+                                   Price = h.Price,
+                                   Capacity = (ushort)h.Capacity,
+                                   HddFormFactor = (HDDFormFactor)Enum.Parse(typeof(HDDFormFactor), h.HddFormFactor),
+                                   HddInterfaceType = (HDDInterfaceType)Enum.Parse(typeof(HDDInterfaceType), h.HddInterface),
+                                   HddType = (HDDType)Enum.Parse(typeof(HDDType), h.HddType),
+                                   Speed = (ushort)h.Speed
                                };
 
                 hdds.Add(hdd);

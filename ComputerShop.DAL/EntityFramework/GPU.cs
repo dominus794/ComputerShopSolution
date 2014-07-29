@@ -15,34 +15,43 @@ namespace ComputerShop.DAL.EntityFramework
         }
 
         [Key]
-        public int gpu_id { get; set; }
+        [Column("gpu_id")]
+        public int GpuId { get; set; }
 
-        public int manufacturer_id { get; set; }
+        [Column("manufacturer_id")]
+        public int ManufacturerId { get; set; }
 
         [Required]
         [StringLength(50)]
+        [Column("Model")]
         public string model { get; set; }
 
-        [Column(TypeName = "smallmoney")]
-        public decimal price { get; set; }
+        [Column("price", TypeName = "smallmoney")]
+        public decimal Price { get; set; }
 
         [Required]
         [StringLength(10)]
-        public string gpu_model { get; set; }
+        [Column("gpu_model")]
+        public string GpuModel { get; set; }
 
-        public short gpu_clock_speed { get; set; }
+        [Column("gpu_clock_speed")]
+        public short GpuClockSpeed { get; set; }
 
-        public short vram_size { get; set; }
+        [Column("vram_size")]
+        public short VramSize { get; set; }
 
-        public short vram_clock_speed { get; set; }
+        [Column("vram_clock_speed")]
+        public short VramClockSpeed { get; set; }
 
         [Required]
         [StringLength(10)]
-        public string vram_type { get; set; }
+        [Column("vram_type")]
+        public string VramType { get; set; }
 
         [Required]
         [StringLength(10)]
-        public string gpu_type { get; set; }
+        [Column("gpu_type")]
+        public string GpuType { get; set; }
 
         public virtual ICollection<DesktopGPU> DesktopGPUs { get; set; }
 

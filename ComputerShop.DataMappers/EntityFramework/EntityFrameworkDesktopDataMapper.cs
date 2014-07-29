@@ -37,7 +37,7 @@ namespace ComputerShop.DataMappers.EntityFramework
                     // create the EF Desktop object
                     DesktopEntity desktop = new DesktopEntity();
                     // find the EF Manufacturer object
-                    ManufacturerEntity manufacturer = context.Manufacturers.Single(m => m.manufacturer_id == data.Manufacturer.ID);
+                    ManufacturerEntity manufacturer = context.Manufacturers.Single(m => m.ManufacturerId == data.Manufacturer.ID);
                     // find the EF CPU object
                     CPUEntity cpu = context.CPUs.Single(c => c.cpu_id == data.Cpu.ID);
 
@@ -51,13 +51,13 @@ namespace ComputerShop.DataMappers.EntityFramework
                         int quantity = modules.Value;
 
                         //get the EF RamModuleEntity object that matches.
-                        RamModuleEntity moduleEntity = context.RamModules.Single(r => r.ram_id == module.ID);
+                        RamModuleEntity moduleEntity = context.RamModules.Single(r => r.RamId == module.ID);
 
                         //create the EF DesktopRamModuleEntity object
                         DesktopRamModuleEntity desktopRamModuleEntity = new DesktopRamModuleEntity();
-                        desktopRamModuleEntity.ram_id = moduleEntity.ram_id;
+                        desktopRamModuleEntity.RamId = moduleEntity.RamId;
                         desktopRamModuleEntity.RamModule = moduleEntity;
-                        desktopRamModuleEntity.quantity = quantity;
+                        desktopRamModuleEntity.Quantity = quantity;
 
                         desktopRamModules.Add(desktopRamModuleEntity);
                     }
@@ -70,12 +70,12 @@ namespace ComputerShop.DataMappers.EntityFramework
                         IHDD hdd = hdds.Key;
                         int quantity = hdds.Value;
 
-                        HDDEntity hddEntity = context.HDDs.Single(h => h.hdd_id == hdd.ID);
+                        HDDEntity hddEntity = context.HDDs.Single(h => h.HddId == hdd.ID);
 
                         DesktopHDDEntity desktopHDDEntity = new DesktopHDDEntity();
-                        desktopHDDEntity.hdd_id = hddEntity.hdd_id;
+                        desktopHDDEntity.HddId = hddEntity.HddId;
                         desktopHDDEntity.HDD = hddEntity;
-                        desktopHDDEntity.quantity = quantity;
+                        desktopHDDEntity.Quantity = quantity;
 
                         desktopHDDs.Add(desktopHDDEntity);
                     }
@@ -88,26 +88,26 @@ namespace ComputerShop.DataMappers.EntityFramework
                         IGPU gpu = gpus.Key;
                         int quantity = gpus.Value;
 
-                        GPUEntity gpuEntity = context.GPUs.Single(g => g.gpu_id == gpu.ID);
+                        GPUEntity gpuEntity = context.GPUs.Single(g => g.GpuId == gpu.ID);
 
                         DesktopGPUEntity desktopGPUEntity = new DesktopGPUEntity();
-                        desktopGPUEntity.gpu_id = gpuEntity.gpu_id;
+                        desktopGPUEntity.GpuId = gpuEntity.GpuId;
                         desktopGPUEntity.GPU = gpuEntity;
-                        desktopGPUEntity.quantity = quantity;
+                        desktopGPUEntity.Quantity = quantity;
 
                         desktopGPUs.Add(desktopGPUEntity);
                     }
 
-                    desktop.manufacturer_id = data.Manufacturer.ID;
+                    desktop.ManufacturerId = data.Manufacturer.ID;
                     desktop.Manufacturer = manufacturer;
-                    desktop.model = data.Model;
-                    desktop.price = data.Price;
-                    desktop.cpu_id = data.Cpu.ID;
+                    desktop.Model = data.Model;
+                    desktop.Price = data.Price;
+                    desktop.CpuId = data.Cpu.ID;
                     desktop.CPU = cpu;
                     desktop.DesktopRamModules = desktopRamModules;
                     desktop.DesktopHDDs = desktopHDDs;
                     desktop.DesktopGPUs = desktopGPUs;
-                    desktop.monitor_id = 1;
+                    desktop.MonitorId = 1;
 
                     //insert into database and submit changes.
                     context.Desktops.Add(desktop);
@@ -126,7 +126,7 @@ namespace ComputerShop.DataMappers.EntityFramework
         public override void Delete(Desktop data)
         {
             // find the EF Desktop object
-            DesktopEntity desktop = context.Desktops.Single(d => d.desktop_id == data.ID);
+            DesktopEntity desktop = context.Desktops.Single(d => d.DesktopId == data.ID);
             //delete it and submit the changes.
             context.Desktops.Remove(desktop);
             context.SaveChanges();	
@@ -135,7 +135,7 @@ namespace ComputerShop.DataMappers.EntityFramework
         public override Desktop Select(int id)
         {
             // find the EF Desktop object
-            DesktopEntity desktop = context.Desktops.Single(d => d.desktop_id == id);
+            DesktopEntity desktop = context.Desktops.Single(d => d.DesktopId == id);
 
             // create necessary mappers
             var cpuMapper = new EntityFrameworkCPUDataMapper();
@@ -144,7 +144,7 @@ namespace ComputerShop.DataMappers.EntityFramework
             var hddMapper = new EntityFrameworkHDDDataMapper();
             var gpuMapper = new EntityFrameworkGPUDataMapper();
 
-            Manufacturer manufacturer = manufacturerMapper.Select(desktop.manufacturer_id.Value);
+            Manufacturer manufacturer = manufacturerMapper.Select(desktop.ManufacturerId.Value);
             // from the EF Desktop object, create domain objects                        
             CPU cpu = cpuMapper.Select(desktop.CPU.cpu_id);
 
@@ -154,10 +154,10 @@ namespace ComputerShop.DataMappers.EntityFramework
             {
                 //get the RamModuleEntity and quantity.
                 RamModuleEntity ramModuleEntity = desktopRamModuleEntity.RamModule;
-                int quantity = desktopRamModuleEntity.quantity;
+                int quantity = desktopRamModuleEntity.Quantity;
 
                 //create a domain RamModule
-                IRamModule ramModule = ramModuleMapper.Select(ramModuleEntity.ram_id);
+                IRamModule ramModule = ramModuleMapper.Select(ramModuleEntity.RamId);
 
                 //add it to the collection with the required quantity.
                 desktopRamModulesCollection.AddRamModule(ramModule, quantity);
@@ -169,10 +169,10 @@ namespace ComputerShop.DataMappers.EntityFramework
             {
                 //get the hdd and quantity.
                 HDDEntity hddEntity = desktopHDDEntity.HDD;
-                int quantity = desktopHDDEntity.quantity;
+                int quantity = desktopHDDEntity.Quantity;
 
                 //create the domain HDD
-                IHDD hdd = hddMapper.Select(hddEntity.hdd_id);
+                IHDD hdd = hddMapper.Select(hddEntity.HddId);
 
                 //add it to the collection with the required quantity.
                 desktopHDDCollection.AddHDD(hdd, quantity);
@@ -184,20 +184,20 @@ namespace ComputerShop.DataMappers.EntityFramework
             {
                 //get the gpu and quantity.
                 GPUEntity gpuEntity = desktopGPUEntity.GPU;
-                int quantity = desktopGPUEntity.quantity;
+                int quantity = desktopGPUEntity.Quantity;
 
                 //create the domain GPU
-                IGPU gpu = gpuMapper.Select(gpuEntity.gpu_id);
+                IGPU gpu = gpuMapper.Select(gpuEntity.GpuId);
 
                 //add it to the collection with the required quantity.
                 desktopGPUCollection.AddGPU(gpu, quantity);
             }
 
             //create a new domain Desktop object and return it.
-            return new Desktop(desktop.desktop_id,
+            return new Desktop(desktop.DesktopId,
                                manufacturer,
-                               desktop.model,
-                               desktop.price,
+                               desktop.Model,
+                               desktop.Price,
                                cpu,
                                desktopRamModulesCollection,
                                desktopHDDCollection,
@@ -211,9 +211,9 @@ namespace ComputerShop.DataMappers.EntityFramework
                 using (TransactionScope transaction = new TransactionScope())
                 {
                     // find the EF Desktop object
-                    DesktopEntity desktop = context.Desktops.Single(d => d.desktop_id == data.ID);
+                    DesktopEntity desktop = context.Desktops.Single(d => d.DesktopId == data.ID);
                     // find the EF Manufacturer object
-                    ManufacturerEntity manufacturer = context.Manufacturers.Single(m => m.manufacturer_id == data.Manufacturer.ID);
+                    ManufacturerEntity manufacturer = context.Manufacturers.Single(m => m.ManufacturerId == data.Manufacturer.ID);
                     // find the EF CPU object
                     CPUEntity cpu = context.CPUs.Single(c => c.cpu_id == data.Cpu.ID);
 
@@ -232,13 +232,13 @@ namespace ComputerShop.DataMappers.EntityFramework
                         int quantity = modules.Value;
 
                         //get the EF RamModuleEntity object that matches.
-                        RamModuleEntity moduleEntity = context.RamModules.Single(r => r.ram_id == module.ID);
+                        RamModuleEntity moduleEntity = context.RamModules.Single(r => r.RamId == module.ID);
 
                         //create the EF DesktopRamModuleEntity object
                         DesktopRamModuleEntity desktopRamModuleEntity = new DesktopRamModuleEntity();
-                        desktopRamModuleEntity.ram_id = moduleEntity.ram_id;
+                        desktopRamModuleEntity.RamId = moduleEntity.RamId;
                         desktopRamModuleEntity.RamModule = moduleEntity;
-                        desktopRamModuleEntity.quantity = quantity;
+                        desktopRamModuleEntity.Quantity = quantity;
 
                         desktopRamModules.Add(desktopRamModuleEntity);
                     }
@@ -251,12 +251,12 @@ namespace ComputerShop.DataMappers.EntityFramework
                         IHDD hdd = hdds.Key;
                         int quantity = hdds.Value;
 
-                        HDDEntity hddEntity = context.HDDs.Single(h => h.hdd_id == hdd.ID);
+                        HDDEntity hddEntity = context.HDDs.Single(h => h.HddId == hdd.ID);
 
                         DesktopHDDEntity desktopHDDEntity = new DesktopHDDEntity();
-                        desktopHDDEntity.hdd_id = hddEntity.hdd_id;
+                        desktopHDDEntity.HddId = hddEntity.HddId;
                         desktopHDDEntity.HDD = hddEntity;
-                        desktopHDDEntity.quantity = quantity;
+                        desktopHDDEntity.Quantity = quantity;
 
                         desktopHDDs.Add(desktopHDDEntity);
                     }
@@ -269,27 +269,27 @@ namespace ComputerShop.DataMappers.EntityFramework
                         IGPU gpu = gpus.Key;
                         int quantity = gpus.Value;
 
-                        GPUEntity gpuEntity = context.GPUs.Single(g => g.gpu_id == gpu.ID);
+                        GPUEntity gpuEntity = context.GPUs.Single(g => g.GpuId == gpu.ID);
 
                         DesktopGPUEntity desktopGPUEntity = new DesktopGPUEntity();
-                        desktopGPUEntity.gpu_id = gpuEntity.gpu_id;
+                        desktopGPUEntity.GpuId = gpuEntity.GpuId;
                         desktopGPUEntity.GPU = gpuEntity;
-                        desktopGPUEntity.quantity = quantity;
+                        desktopGPUEntity.Quantity = quantity;
 
                         desktopGPUs.Add(desktopGPUEntity);
                     }
 
                     // update
-                    desktop.manufacturer_id = data.Manufacturer.ID;
+                    desktop.ManufacturerId = data.Manufacturer.ID;
                     desktop.Manufacturer = manufacturer;
-                    desktop.model = data.Model;
-                    desktop.price = data.Price;
-                    desktop.cpu_id = data.Cpu.ID;
+                    desktop.Model = data.Model;
+                    desktop.Price = data.Price;
+                    desktop.CpuId = data.Cpu.ID;
                     desktop.CPU = cpu;
                     desktop.DesktopRamModules = desktopRamModules;
                     desktop.DesktopHDDs = desktopHDDs;
                     desktop.DesktopGPUs = desktopGPUs;
-                    desktop.monitor_id = 1;
+                    desktop.MonitorId = 1;
 
                     // save                    
                     context.SaveChanges();
@@ -310,7 +310,7 @@ namespace ComputerShop.DataMappers.EntityFramework
 
             foreach (DesktopEntity d in context.Desktops)
             {
-                desktops.Add(Select(d.desktop_id));
+                desktops.Add(Select(d.DesktopId));
             }
 
             return desktops;

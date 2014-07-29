@@ -26,21 +26,21 @@ namespace ComputerShop.DAL.EntityFramework
         public virtual DbSet<RamModule> RamModules { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
+        {               
             modelBuilder.Entity<CPU>()
-                .Property(e => e.price)
+                .Property(e => e.Price)
                 .HasPrecision(10, 4);
 
             modelBuilder.Entity<CPU>()
-                .Property(e => e.clock_speed)
+                .Property(e => e.ClockSpeed)
                 .HasPrecision(3, 2);
 
             modelBuilder.Entity<CPU>()
-                .Property(e => e.no_of_cores)
+                .Property(e => e.NoOfCores)
                 .IsFixedLength();
 
             modelBuilder.Entity<CPU>()
-                .Property(e => e.cpu_form_factor)
+                .Property(e => e.CpuFormFactor)
                 .IsFixedLength();
 
             modelBuilder.Entity<CPU>()
@@ -54,7 +54,7 @@ namespace ComputerShop.DAL.EntityFramework
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Desktop>()
-                .Property(e => e.price)
+                .Property(e => e.Price)
                 .HasPrecision(10, 4);
 
             modelBuilder.Entity<Desktop>()
@@ -73,19 +73,19 @@ namespace ComputerShop.DAL.EntityFramework
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<GPU>()
-                .Property(e => e.price)
+                .Property(e => e.Price)
                 .HasPrecision(10, 4);
 
             modelBuilder.Entity<GPU>()
-                .Property(e => e.gpu_model)
+                .Property(e => e.GpuModel)
                 .IsFixedLength();
 
             modelBuilder.Entity<GPU>()
-                .Property(e => e.vram_type)
+                .Property(e => e.VramType)
                 .IsFixedLength();
 
             modelBuilder.Entity<GPU>()
-                .Property(e => e.gpu_type)
+                .Property(e => e.GpuType)
                 .IsFixedLength();
 
             modelBuilder.Entity<GPU>()
@@ -99,19 +99,19 @@ namespace ComputerShop.DAL.EntityFramework
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<HDD>()
-                .Property(e => e.price)
+                .Property(e => e.Price)
                 .HasPrecision(10, 4);
 
             modelBuilder.Entity<HDD>()
-                .Property(e => e.hdd_type)
+                .Property(e => e.HddType)
                 .IsFixedLength();
 
             modelBuilder.Entity<HDD>()
-                .Property(e => e.hdd_form_factor)
+                .Property(e => e.HddFormFactor)
                 .IsFixedLength();
 
             modelBuilder.Entity<HDD>()
-                .Property(e => e.hdd_interface)
+                .Property(e => e.HddInterface)
                 .IsFixedLength();
 
             modelBuilder.Entity<HDD>()
@@ -125,11 +125,11 @@ namespace ComputerShop.DAL.EntityFramework
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Laptop>()
-                .Property(e => e.price)
+                .Property(e => e.Price)
                 .HasPrecision(10, 4);
 
             modelBuilder.Entity<Laptop>()
-                .Property(e => e.display_size)
+                .Property(e => e.DisplaySize)
                 .HasPrecision(3, 1);
 
             modelBuilder.Entity<Manufacturer>()
@@ -163,19 +163,19 @@ namespace ComputerShop.DAL.EntityFramework
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Monitor>()
-                .Property(e => e.price)
+                .Property(e => e.Price)
                 .HasPrecision(10, 4);
 
             modelBuilder.Entity<RamModule>()
-                .Property(e => e.price)
+                .Property(e => e.Price)
                 .HasPrecision(10, 4);
 
             modelBuilder.Entity<RamModule>()
-                .Property(e => e.ddr_version)
+                .Property(e => e.DDRVersion)
                 .IsFixedLength();
 
             modelBuilder.Entity<RamModule>()
-                .Property(e => e.ram_form_factor)
+                .Property(e => e.RamFormFactor)
                 .IsFixedLength();
 
             modelBuilder.Entity<RamModule>()

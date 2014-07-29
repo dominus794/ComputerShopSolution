@@ -28,14 +28,14 @@ namespace ComputerShop.DataMappers.EntityFramework
             // create the EF CPU object
             CPUEntity cpu = new CPUEntity();
             // get the EF Manufacturer object using the domain objects manufacturer id
-            ManufacturerEntity manufacturer = context.Manufacturers.Single(m => m.manufacturer_id == data.Manufacturer.ID);
+            ManufacturerEntity manufacturer = context.Manufacturers.Single(m => m.ManufacturerId == data.Manufacturer.ID);
 
             cpu.Manufacturer = manufacturer;
-            cpu.model = data.Model;
-            cpu.price = data.Price;
-            cpu.clock_speed = Decimal.Parse(data.ClockSpeed.ToString());
-            cpu.no_of_cores = data.CpuCoreType.ToString();
-            cpu.cpu_form_factor = data.CpuFormFactor.ToString();
+            cpu.Model = data.Model;
+            cpu.Price = data.Price;
+            cpu.ClockSpeed = Decimal.Parse(data.ClockSpeed.ToString());
+            cpu.NoOfCores = data.CpuCoreType.ToString();
+            cpu.CpuFormFactor = data.CpuFormFactor.ToString();
 
             // insert into the database and save
             context.CPUs.Add(cpu);
@@ -58,12 +58,12 @@ namespace ComputerShop.DataMappers.EntityFramework
 
             // create a domain CPU object and return it
             return new CPU(cpu.cpu_id,
-                           new Manufacturer(cpu.Manufacturer.manufacturer_id, cpu.Manufacturer.name),
-                           cpu.model,
-                           cpu.price,
-                           (float)cpu.clock_speed,
-                           (CPUFormFactor)Enum.Parse(typeof(CPUFormFactor), cpu.cpu_form_factor),
-                           (CPUCoreType)Enum.Parse(typeof(CPUCoreType), cpu.no_of_cores));
+                           new Manufacturer(cpu.Manufacturer.ManufacturerId, cpu.Manufacturer.Name),
+                           cpu.Model,
+                           cpu.Price,
+                           (float)cpu.ClockSpeed,
+                           (CPUFormFactor)Enum.Parse(typeof(CPUFormFactor), cpu.CpuFormFactor),
+                           (CPUCoreType)Enum.Parse(typeof(CPUCoreType), cpu.NoOfCores));
 
         }
 
@@ -73,16 +73,16 @@ namespace ComputerShop.DataMappers.EntityFramework
             CPUEntity cpu = context.CPUs.Single(c => c.cpu_id == data.ID);
 
             // find the EF Manufacturer object from the database, in case it has changed in the domain object
-            ManufacturerEntity manufacturer = context.Manufacturers.Single(m => m.manufacturer_id == data.Manufacturer.ID);
+            ManufacturerEntity manufacturer = context.Manufacturers.Single(m => m.ManufacturerId == data.Manufacturer.ID);
             
             // update
-            cpu.manufacturer_id = data.Manufacturer.ID;
+            cpu.ManufacturerId = data.Manufacturer.ID;
             cpu.Manufacturer = manufacturer;
-            cpu.model = data.Model;
-            cpu.price = data.Price;
-            cpu.clock_speed = Decimal.Parse(data.ClockSpeed.ToString());
-            cpu.no_of_cores = data.CpuCoreType.ToString();
-            cpu.cpu_form_factor = data.CpuFormFactor.ToString();
+            cpu.Model = data.Model;
+            cpu.Price = data.Price;
+            cpu.ClockSpeed = Decimal.Parse(data.ClockSpeed.ToString());
+            cpu.NoOfCores = data.CpuCoreType.ToString();
+            cpu.CpuFormFactor = data.CpuFormFactor.ToString();
 
             // save            
             context.SaveChanges();
@@ -115,14 +115,14 @@ namespace ComputerShop.DataMappers.EntityFramework
                                    ID = c.cpu_id,
                                    Manufacturer = new Manufacturer
                                    {
-                                       ID = c.Manufacturer.manufacturer_id,
-                                       Name = c.Manufacturer.name
+                                       ID = c.Manufacturer.ManufacturerId,
+                                       Name = c.Manufacturer.Name
                                    },
-                                   Model = c.model,
-                                   Price = c.price,
-                                   ClockSpeed = (float)c.clock_speed,
-                                   CpuFormFactor = (CPUFormFactor)Enum.Parse(typeof(CPUFormFactor), c.cpu_form_factor),
-                                   CpuCoreType = (CPUCoreType)Enum.Parse(typeof(CPUCoreType), c.no_of_cores)
+                                   Model = c.Model,
+                                   Price = c.Price,
+                                   ClockSpeed = (float)c.ClockSpeed,
+                                   CpuFormFactor = (CPUFormFactor)Enum.Parse(typeof(CPUFormFactor), c.CpuFormFactor),
+                                   CpuCoreType = (CPUCoreType)Enum.Parse(typeof(CPUCoreType), c.NoOfCores)
                                };
 
                 cpus.Add(cpu);

@@ -15,32 +15,40 @@ namespace ComputerShop.DAL.EntityFramework
         }
 
         [Key]
-        public int hdd_id { get; set; }
+        [Column("hdd_id")]
+        public int HddId { get; set; }
 
-        public int manufacturer_id { get; set; }
+        [Column("manufacturer_id")]
+        public int ManufacturerId { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string model { get; set; }
+        [Column("model")]
+        public string Model { get; set; }
 
-        [Column(TypeName = "smallmoney")]
-        public decimal price { get; set; }
+        [Column("price", TypeName = "smallmoney")]
+        public decimal Price { get; set; }
 
-        public short capacity { get; set; }
+        [Column("capacity")]
+        public short Capacity { get; set; }
 
-        public short speed { get; set; }
-
-        [Required]
-        [StringLength(10)]
-        public string hdd_type { get; set; }
-
-        [Required]
-        [StringLength(10)]
-        public string hdd_form_factor { get; set; }
+        [Column("speed")]
+        public short Speed { get; set; }
 
         [Required]
         [StringLength(10)]
-        public string hdd_interface { get; set; }
+        [Column("hdd_type")]
+        public string HddType { get; set; }
+
+        [Required]
+        [StringLength(10)]
+        [Column("hdd_form_factor")]
+        public string HddFormFactor { get; set; }
+
+        [Required]
+        [StringLength(10)]
+        [Column("hdd_interface")]
+        public string HddInterface { get; set; }
 
         public virtual ICollection<DesktopHDD> DesktopHDDs { get; set; }
 
