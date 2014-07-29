@@ -45,7 +45,7 @@ namespace ComputerShop.DataMappers.EntityFramework
         public override void Delete(CPU data)
         {
             // find the EF CPU object
-            CPUEntity cpu = context.CPUs.Single(c => c.cpu_id == data.ID);
+            CPUEntity cpu = context.CPUs.Single(c => c.CpuId == data.ID);
             // delete it and save
             context.CPUs.Remove(cpu);
             context.SaveChanges();
@@ -54,10 +54,10 @@ namespace ComputerShop.DataMappers.EntityFramework
         public override CPU Select(int id)
         {
             // find the EF CPU object
-            CPUEntity cpu = context.CPUs.Single(c => c.cpu_id == id);
+            CPUEntity cpu = context.CPUs.Single(c => c.CpuId == id);
 
             // create a domain CPU object and return it
-            return new CPU(cpu.cpu_id,
+            return new CPU(cpu.CpuId,
                            new Manufacturer(cpu.Manufacturer.ManufacturerId, cpu.Manufacturer.Name),
                            cpu.Model,
                            cpu.Price,
@@ -70,7 +70,7 @@ namespace ComputerShop.DataMappers.EntityFramework
         public override void Update(CPU data)
         {
             // find the EF CPU object
-            CPUEntity cpu = context.CPUs.Single(c => c.cpu_id == data.ID);
+            CPUEntity cpu = context.CPUs.Single(c => c.CpuId == data.ID);
 
             // find the EF Manufacturer object from the database, in case it has changed in the domain object
             ManufacturerEntity manufacturer = context.Manufacturers.Single(m => m.ManufacturerId == data.Manufacturer.ID);
@@ -112,7 +112,7 @@ namespace ComputerShop.DataMappers.EntityFramework
             {
                 var cpu = new CPU
                                {
-                                   ID = c.cpu_id,
+                                   ID = c.CpuId,
                                    Manufacturer = new Manufacturer
                                    {
                                        ID = c.Manufacturer.ManufacturerId,

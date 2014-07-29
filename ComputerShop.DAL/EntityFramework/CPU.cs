@@ -15,7 +15,8 @@ namespace ComputerShop.DAL.EntityFramework
         }
 
         [Key]
-        public int cpu_id { get; set; }
+        [Column("cpu_id")]
+        public int CpuId { get; set; }
 
         [Column("manufacturer_id")]
         public int ManufacturerId { get; set; }

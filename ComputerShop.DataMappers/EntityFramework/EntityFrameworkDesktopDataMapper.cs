@@ -39,7 +39,7 @@ namespace ComputerShop.DataMappers.EntityFramework
                     // find the EF Manufacturer object
                     ManufacturerEntity manufacturer = context.Manufacturers.Single(m => m.ManufacturerId == data.Manufacturer.ID);
                     // find the EF CPU object
-                    CPUEntity cpu = context.CPUs.Single(c => c.cpu_id == data.Cpu.ID);
+                    CPUEntity cpu = context.CPUs.Single(c => c.CpuId == data.Cpu.ID);
 
                     //create and EntitySet to hold the DesktopRamModuleEntity's
                     IList<DesktopRamModuleEntity> desktopRamModules = new List<DesktopRamModuleEntity>();
@@ -146,7 +146,7 @@ namespace ComputerShop.DataMappers.EntityFramework
 
             Manufacturer manufacturer = manufacturerMapper.Select(desktop.ManufacturerId.Value);
             // from the EF Desktop object, create domain objects                        
-            CPU cpu = cpuMapper.Select(desktop.CPU.cpu_id);
+            CPU cpu = cpuMapper.Select(desktop.CPU.CpuId);
 
             //create a IRamModuleCollection to hold the RamModules.
             IRamModuleCollection desktopRamModulesCollection = new RamModuleCollection();
@@ -215,7 +215,7 @@ namespace ComputerShop.DataMappers.EntityFramework
                     // find the EF Manufacturer object
                     ManufacturerEntity manufacturer = context.Manufacturers.Single(m => m.ManufacturerId == data.Manufacturer.ID);
                     // find the EF CPU object
-                    CPUEntity cpu = context.CPUs.Single(c => c.cpu_id == data.Cpu.ID);
+                    CPUEntity cpu = context.CPUs.Single(c => c.CpuId == data.Cpu.ID);
 
                     //clear the desktop's collections
                     context.DesktopRamModules.RemoveRange(desktop.DesktopRamModules);
